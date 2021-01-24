@@ -63,4 +63,8 @@ export const OnlyHorizontalP = styled(P)`
 export const Strong = styled.strong`
   font-weight: 1000;
   font-size: 3.5vh;
+
+  ${isPortrait} {
+    font-size: 2.5vh;
+  }
 `;
