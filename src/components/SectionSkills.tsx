@@ -29,6 +29,7 @@ const Skill = styled.span`
   
   ${isPortrait} {
     margin: 4px;
+    font-size: 2vh;
   }
   ${isHorizontalMobile} {
     margin: 4px;

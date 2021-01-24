@@ -14,6 +14,10 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
   font-size: 5vh;
+
+  ${isPortrait} {
+    font-size: 4vh;
+  }
   ${isHorizontalMobile} {
     font-size: 8vh;
   }
@@ -21,6 +25,10 @@ export const H2 = styled.h2`
 
 export const H3 = styled.h3`
   font-size: 4vh;
+
+  ${isPortrait} {
+    font-size: 3.5vh;
+  }
   ${isHorizontalMobile} {
     font-size: 6vh;
   }
@@ -34,6 +42,7 @@ export const P = styled.p`
   line-height: 180%;
 
   ${isPortrait} {
+    font-size: 2vh;
     line-height: 130%;
     padding: 10px;
     width: 80%;
