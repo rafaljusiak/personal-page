@@ -9,6 +9,7 @@ import {
 } from "./common/animations";
 import { H1, H3 } from "./common/tags";
 import { Section } from "./Section";
+import {isPortrait} from "./common/mediaQueries";
 
 const typeWrittenStyles = `
   opacity: 0;
@@ -28,16 +29,16 @@ const TypeWrittenH1 = styled(H1)`
 `;
 
 const TypeWrittenH3 = styled(H3)`
-  @media (min-width: 768px) {
-    ${typeWrittenStyles}
-    animation: ${typingAnimation} 4s steps(60, end) 2.5s,
-      ${blinkCaretAnimation} 0.5s step-end 12;
-    animation-fill-mode: forwards;
-  }
-  @media (max-width: 768px) {
+  ${typeWrittenStyles}
+  animation: ${typingAnimation} 4s steps(60, end) 2.5s,
+    ${blinkCaretAnimation} 0.5s step-end 12;
+  animation-fill-mode: forwards;
+
+  ${isPortrait} {
     opacity: 0;
     animation: ${fadeIn} 4s linear 3.5s;
     animation-fill-mode: forwards;
+    white-space: break-spaces;
   }
 `;
 

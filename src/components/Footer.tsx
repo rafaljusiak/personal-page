@@ -5,6 +5,7 @@ const FooterP = styled.p`
   bottom: 0;
   position: absolute;
   text-align: center;
+  font-size: 2vh;
   width: 100%;
 `;
 

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { H2 } from "./common/tags";
 import { Section } from "./Section";
+import {isHorizontalMobile, isPortrait} from "./common/mediaQueries";
 
 const SkillContainer = styled.div`
   width: 80%;
@@ -11,8 +12,13 @@ const SkillContainer = styled.div`
 
 const SkillHeader = styled.h4`
   font-size: 3vh;
-  @media (max-width: 768px) {
+  
+  ${isPortrait} {
     margin: 12px;
+  }
+  ${isHorizontalMobile} {
+    font-size: 4vh;
+    margin: 4px;
   }
 `;
 
@@ -20,8 +26,13 @@ const Skill = styled.span`
   margin: 12px;
   font-size: 2.5vh;
   display: inline-block;
-  @media (max-width: 768px) {
+  
+  ${isPortrait} {
     margin: 4px;
+  }
+  ${isHorizontalMobile} {
+    margin: 4px;
+    font-size: 3vh;
   }
 `;
 

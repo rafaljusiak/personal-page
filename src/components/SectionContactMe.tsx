@@ -16,7 +16,7 @@ const ReferenceContainer = styled.div`
   display: flex;
   margin: 0 35%;
   padding: 0 3%;
-  @media (max-width: 768px) {
+  @media (orientation: portrait) {
     flex-wrap: wrap;
   }
 `;
@@ -29,7 +29,7 @@ const Reference = styled.a`
 `;
 
 const ReferenceLinkedIn = styled(Reference)`
-  @media (max-width: 768px) {
+  @media (orientation: portrait) {
     margin: 15% -12% 15% 0;
   }
 `;

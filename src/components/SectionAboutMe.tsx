@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Section } from "./Section";
-import { H2, OnlyDesktopP, P, Strong } from "./common/tags";
+import { H2, OnlyHorizontalP, P, Strong } from "./common/tags";
 
 export default () => {
   return (
@@ -22,11 +22,11 @@ export default () => {
         <Strong>Master of Engineering degree in Computer Science</Strong> after
         my studies at Warsaw University of Life Sciences.
       </P>
-      <OnlyDesktopP>
+      <OnlyHorizontalP>
         When I do not deal with computer technologies, I like to spend my time
         outside, sightseeing and driving my car. When at home, I enjoy watching
         classic movies, discovering new music and playing board games.
-      </OnlyDesktopP>
+      </OnlyHorizontalP>
     </Section>
   );
 };
