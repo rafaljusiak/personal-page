@@ -1,0 +1,53 @@
+import React from "react";
+import styled from "styled-components";
+
+import {
+  blinkCaretAnimation,
+  CARET_COLOR,
+  fadeIn,
+  typingAnimation,
+} from "./common/animations";
+import { H1, H3 } from "./common/tags";
+import { Section } from "./Section";
+
+const typeWrittenStyles = `
+  opacity: 0;
+  overflow: hidden;
+  border-right: 0.15em solid ${CARET_COLOR};
+  white-space: nowrap;
+  margin: 0 auto;
+  width: fit-content;
+  max-width: fit-content;
+`;
+
+const TypeWrittenH1 = styled(H1)`
+  ${typeWrittenStyles}
+  animation: ${typingAnimation} 3.5s steps(50, end),
+    ${blinkCaretAnimation} 0.5s step-end 4;
+  animation-fill-mode: forwards;
+`;
+
+const TypeWrittenH3 = styled(H3)`
+  @media (min-width: 768px) {
+    ${typeWrittenStyles}
+    animation: ${typingAnimation} 4s steps(60, end) 2.5s,
+      ${blinkCaretAnimation} 0.5s step-end 12;
+    animation-fill-mode: forwards;
+  }
+  @media (max-width: 768px) {
+    opacity: 0;
+    animation: ${fadeIn} 4s linear 3.5s;
+    animation-fill-mode: forwards;
+  }
+`;
+
+export default () => {
+  return (
+    <Section>
+      <TypeWrittenH1>Hi, my name is Rafał</TypeWrittenH1>
+      <TypeWrittenH3>
+        I'm a web developer and software engineer living in Warsaw, Poland
+      </TypeWrittenH3>
+    </Section>
+  );
+};
