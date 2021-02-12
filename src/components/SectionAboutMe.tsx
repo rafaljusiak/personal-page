@@ -1,9 +1,10 @@
 import React from "react";
 
-import { Section } from "./Section";
+import { Section, SectionProps } from "./Section";
 import { H2, OnlyHorizontalP, P, Strong } from "./common/tags";
+import { ArrowIcon } from "./common/icons";
 
-export default () => {
+export default ({ fullpageApi }: SectionProps) => {
   return (
     <Section>
       <H2>About me</H2>
@@ -27,6 +28,11 @@ export default () => {
         outside, sightseeing and driving my car. When at home, I enjoy watching
         classic movies, discovering new music and playing board games.
       </OnlyHorizontalP>
+      <ArrowIcon
+        onClick={() => {
+          fullpageApi.moveSectionDown();
+        }}
+      />
     </Section>
   );
 };

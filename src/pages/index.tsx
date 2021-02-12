@@ -30,9 +30,9 @@ export default () => {
           return (
             <>
               <ReactFullpage.Wrapper>
-                <SectionMain />
-                <SectionAboutMe />
-                <SectionSkills />
+                <SectionMain fullpageApi={fullpageApi} />
+                <SectionAboutMe fullpageApi={fullpageApi} />
+                <SectionSkills fullpageApi={fullpageApi} />
                 <SectionContactMe />
               </ReactFullpage.Wrapper>
             </>

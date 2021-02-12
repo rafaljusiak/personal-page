@@ -8,8 +8,8 @@ import {
   typingAnimation,
 } from "./common/animations";
 import { H1, H3 } from "./common/tags";
-import { Section } from "./Section";
-import {isPortrait} from "./common/mediaQueries";
+import { Section, SectionProps } from "./Section";
+import { isPortrait } from "./common/mediaQueries";
 
 const typeWrittenStyles = `
   opacity: 0;
@@ -23,7 +23,7 @@ const typeWrittenStyles = `
 
 const TypeWrittenH1 = styled(H1)`
   ${typeWrittenStyles}
-  animation: ${typingAnimation} 3s steps(50, end),
+  animation: ${typingAnimation} 2.5s steps(40, end),
     ${blinkCaretAnimation} 0.5s step-end 4;
   animation-fill-mode: forwards;
 `;
@@ -47,7 +47,7 @@ const HeaderContainer = styled.div`
   margin: auto;
 `;
 
-export default () => {
+export default ({fullpageApi}: SectionProps) => {
   return (
     <Section>
       <HeaderContainer>

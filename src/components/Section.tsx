@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { fullpageApi } from "@fullpage/react-fullpage";
 
 const StyledDiv = styled.div`
   text-align: center;
@@ -9,6 +10,10 @@ const StyledDiv = styled.div`
 type Props = {
   children: React.ReactNode;
   textColor?: string;
+};
+
+export type SectionProps = {
+  fullpageApi: fullpageApi;
 };
 
 export const Section = ({ children, textColor }: Props) => {

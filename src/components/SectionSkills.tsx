@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { H2 } from "./common/tags";
-import { Section } from "./Section";
-import {isHorizontalMobile, isPortrait} from "./common/mediaQueries";
+import { Section, SectionProps } from "./Section";
+import { ArrowIcon } from "./common/icons";
+import { isHorizontalMobile, isPortrait } from "./common/mediaQueries";
 
 const SkillContainer = styled.div`
   width: 80%;
@@ -12,7 +13,7 @@ const SkillContainer = styled.div`
 
 const SkillHeader = styled.h4`
   font-size: 3vh;
-  
+
   ${isPortrait} {
     margin: 12px;
   }
@@ -26,7 +27,7 @@ const Skill = styled.span`
   margin: 12px;
   font-size: 2.5vh;
   display: inline-block;
-  
+
   ${isPortrait} {
     margin: 4px;
     font-size: 2vh;
@@ -37,7 +38,7 @@ const Skill = styled.span`
   }
 `;
 
-export default () => {
+export default ({fullpageApi}: SectionProps) => {
   return (
     <Section>
       <H2>Skills and tools</H2>
@@ -67,8 +68,6 @@ export default () => {
         <Skill>JavaScript</Skill>
         <Skill>TypeScript</Skill>
         <Skill>React</Skill>
-        <Skill>Redux+Saga</Skill>
-        <Skill>Relay</Skill>
         <Skill>jQuery</Skill>
         <Skill>HTML5</Skill>
         <Skill>jest</Skill>
@@ -88,6 +87,7 @@ export default () => {
         <Skill>SCRUM</Skill>
         <Skill>Agile Development</Skill>
       </SkillContainer>
+      <ArrowIcon onClick={() => fullpageApi.moveSectionDown()} />
     </Section>
   );
 };

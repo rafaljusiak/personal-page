@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FaEnvelopeSquare } from "react-icons/fa";
+import { EnvelopeIcon } from "./common/icons";
 
 // @ts-ignore
 import GithubLogo from "../images/GitHub.png";
@@ -37,11 +37,6 @@ const ReferenceLinkedIn = styled(Reference)`
 const LogoImg = styled.img`
   height: 8vh;
   width: auto;
-`;
-
-const EnvelopeIcon = styled(FaEnvelopeSquare)`
-  color: black;
-  font-size: 8vh;
 `;
 
 export default () => {
