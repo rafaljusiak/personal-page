@@ -38,7 +38,7 @@ const Skill = styled.span`
   }
 `;
 
-export default ({fullpageApi}: SectionProps) => {
+export default ({ fullpageApi }: SectionProps) => {
   return (
     <Section>
       <H2>Skills and tools</H2>

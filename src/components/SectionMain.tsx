@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { fullpageApi } from "@fullpage/react-fullpage";
 
 import {
   blinkCaretAnimation,
@@ -21,16 +22,19 @@ const typeWrittenStyles = `
   max-width: fit-content;
 `;
 
+const TYPE1_LENGTH: number = 2.5;
+const TYPE2_LENGTH: number = 3.5;
+
 const TypeWrittenH1 = styled(H1)`
   ${typeWrittenStyles}
-  animation: ${typingAnimation} 2.5s steps(40, end),
+  animation: ${typingAnimation} ${TYPE1_LENGTH}s steps(40, end),
     ${blinkCaretAnimation} 0.5s step-end 4;
   animation-fill-mode: forwards;
 `;
 
 const TypeWrittenH3 = styled(H3)`
   ${typeWrittenStyles}
-  animation: ${typingAnimation} 4s steps(60, end) 2.5s,
+  animation: ${typingAnimation} ${TYPE2_LENGTH}s steps(60, end) ${TYPE1_LENGTH}s,
     ${blinkCaretAnimation} 0.5s step-end 12;
   animation-fill-mode: forwards;
 
@@ -47,7 +51,26 @@ const HeaderContainer = styled.div`
   margin: auto;
 `;
 
-export default ({fullpageApi}: SectionProps) => {
+const automaticallyMoveToNextSection = (fpApi: fullpageApi): Function => {
+  const ms = (TYPE1_LENGTH + TYPE2_LENGTH) * 1000;
+  const moveToNextSection = () => {
+    const activeSection = fpApi.getActiveSection();
+    if (activeSection.index === 0) {
+      fpApi.moveSectionDown();
+    }
+  };
+  const interval = setTimeout(moveToNextSection, ms);
+  return () => clearTimeout(interval);
+};
+
+
+export default ({ fullpageApi, fullpageState }: SectionProps) => {
+  React.useEffect(() => {
+    if (fullpageState.initialized) {
+      automaticallyMoveToNextSection(fullpageApi);
+    }
+  }, [fullpageState.initialized]);
+
   return (
     <Section>
       <HeaderContainer>

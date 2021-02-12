@@ -24,18 +24,16 @@ export default () => {
       </Helmet>
       <ReactFullpage
         licenseKey={licenseKey}
-        sectionsColor={["#24112f", "#380b1b", "#613fe3", "#c2b1a6"]}
+        sectionsColor={["#24112f", "#3b0c2b", "#5330c7", "#cdb9ae"]}
         navigation
         render={({ state, fullpageApi }) => {
           return (
-            <>
-              <ReactFullpage.Wrapper>
-                <SectionMain fullpageApi={fullpageApi} />
-                <SectionAboutMe fullpageApi={fullpageApi} />
-                <SectionSkills fullpageApi={fullpageApi} />
-                <SectionContactMe />
-              </ReactFullpage.Wrapper>
-            </>
+            <ReactFullpage.Wrapper>
+              <SectionMain fullpageState={state} fullpageApi={fullpageApi} />
+              <SectionAboutMe fullpageApi={fullpageApi} />
+              <SectionSkills fullpageApi={fullpageApi} />
+              <SectionContactMe />
+            </ReactFullpage.Wrapper>
           );
         }}
       />
