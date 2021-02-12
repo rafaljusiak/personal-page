@@ -6,6 +6,7 @@ import SectionMain from "../components/SectionMain";
 import SectionAboutMe from "../components/SectionAboutMe";
 import SectionSkills from "../components/SectionSkills";
 import SectionContactMe from "../components/SectionContactMe";
+import { Loader } from "../components/Loader";
 
 export default () => {
   const licenseKey = process.env.GATSBY_FULLPAGE_LICENSE_KEY;
@@ -24,8 +25,8 @@ export default () => {
       </Helmet>
       <ReactFullpage
         licenseKey={licenseKey}
-        sectionsColor={["#24112f", "#3b0c2b", "#5330c7", "#cdb9ae"]}
         navigation
+        sectionsColor={["#24112f", "#3b0c2b", "#5330c7", "#cdb9ae"]}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>

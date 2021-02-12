@@ -63,7 +63,6 @@ const automaticallyMoveToNextSection = (fpApi: fullpageApi): Function => {
   return () => clearTimeout(interval);
 };
 
-
 export default ({ fullpageApi, fullpageState }: SectionProps) => {
   React.useEffect(() => {
     if (fullpageState.initialized) {
