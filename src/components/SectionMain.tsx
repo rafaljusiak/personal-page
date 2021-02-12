@@ -23,7 +23,7 @@ const typeWrittenStyles = `
 
 const TypeWrittenH1 = styled(H1)`
   ${typeWrittenStyles}
-  animation: ${typingAnimation} 3.5s steps(50, end),
+  animation: ${typingAnimation} 3s steps(50, end),
     ${blinkCaretAnimation} 0.5s step-end 4;
   animation-fill-mode: forwards;
 `;
@@ -42,10 +42,17 @@ const TypeWrittenH3 = styled(H3)`
   }
 `;
 
+const HeaderContainer = styled.div`
+  max-width: 960px;
+  margin: auto;
+`;
+
 export default () => {
   return (
     <Section>
-      <TypeWrittenH1>Hi, my name is Rafał</TypeWrittenH1>
+      <HeaderContainer>
+        <TypeWrittenH1>Hi, my name is Rafał</TypeWrittenH1>
+      </HeaderContainer>
       <TypeWrittenH3>
         I'm a web developer and software engineer living in Warsaw, Poland
       </TypeWrittenH3>
