@@ -28,11 +28,7 @@ export default ({ fullpageApi }: SectionProps) => {
         outside, sightseeing and driving my car. When at home, I enjoy watching
         classic movies, discovering new music and playing board games.
       </OnlyHorizontalP>
-      <ArrowIcon
-        onClick={() => {
-          fullpageApi.moveSectionDown();
-        }}
-      />
+      <ArrowIcon onClick={fullpageApi.moveSectionDown}} />
     </Section>
   );
 };
