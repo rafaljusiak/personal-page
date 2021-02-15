@@ -87,7 +87,7 @@ export default ({ fullpageApi }: SectionProps) => {
         <Skill>SCRUM</Skill>
         <Skill>Agile Development</Skill>
       </SkillContainer>
-      <ArrowIcon onClick={() => fullpageApi.moveSectionDown()} />
+      <ArrowIcon onClick={fullpageApi.moveSectionDown} />
     </Section>
   );
 };
