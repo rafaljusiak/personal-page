@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { isHorizontalMobile, isPortrait } from "./mediaQueries";
 
+// nie lepiej to wrzucić jako style globalne?
+
 export const H1 = styled.h1`
   font-size: 6vh;
 
