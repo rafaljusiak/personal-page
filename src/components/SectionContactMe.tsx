@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { EnvelopeIcon } from "./common/icons";
 
+// użyj gatsby images, albo svg ;)
 // @ts-ignore
 import GithubLogo from "../images/GitHub.png";
 // @ts-ignore

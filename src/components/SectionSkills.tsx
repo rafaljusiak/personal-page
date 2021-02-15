@@ -43,6 +43,7 @@ export default ({ fullpageApi }: SectionProps) => {
     <Section>
       <H2>Skills and tools</H2>
       <SkillContainer>
+        // weź to do tablicy wrzuć czy coś i mapuj
         <SkillHeader>Backend and system administration</SkillHeader>
         <Skill>Python</Skill>
         <Skill>Django</Skill>
@@ -87,7 +88,7 @@ export default ({ fullpageApi }: SectionProps) => {
         <Skill>SCRUM</Skill>
         <Skill>Agile Development</Skill>
       </SkillContainer>
-      <ArrowIcon onClick={() => fullpageApi.moveSectionDown()} />
+      <ArrowIcon onClick={fullpageApi.moveSectionDown} />
     </Section>
   );
 };
