@@ -17,14 +17,12 @@ export type SectionProps = {
   fullpageState?: any;
 };
 
-export const Section = ({ children, textColor }: Props) => {
-  if (!textColor) {
-    textColor = "#F9ECDB";
-  }
-
-  return (
+export const Section = ({ children, textColor }: Props) => (
     <StyledDiv className="section" style={{ color: textColor }}>
       {children}
     </StyledDiv>
-  );
-};
+);
+
+Section.defaultProps = {
+  textColor: "#F9ECDB",
+}

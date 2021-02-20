@@ -39,53 +39,67 @@ const Skill = styled.span`
 `;
 
 export default ({ fullpageApi }: SectionProps) => {
+  const backendSkills = [
+    "Python",
+    "Django",
+    "django-rest-framework",
+    "graphene-django",
+    "Flask",
+    "PostgreSQL",
+    "mySQL",
+    "Linux",
+    "Celery",
+    "Redis",
+    "AWS (EC2, RDS, S3, Lambda, etc.)",
+    "nginX",
+    "docker",
+    "docker-compose",
+    "pytest",
+    "flake8",
+    "black",
+    "invoke",
+  ];
+  const frontendSkills = [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "jQuery",
+    "HTML5",
+    "jest",
+    "Cypress",
+    "yarn",
+    "webpack",
+  ];
+  const otherSkills = [
+    "Git",
+    "Github",
+    "Gitlab",
+    "Slack",
+    "Github Actions",
+    "Jira",
+    "Pivotal Tracker",
+    "SCRUM",
+    "Agile Development",
+  ];
+
+  const mapSkills = (skills: Array<string>): Array<React.ReactElement> => {
+    return skills.map((skill) => <Skill>{skill}</Skill>);
+  };
+
   return (
     <Section>
       <H2>Skills and tools</H2>
       <SkillContainer>
         <SkillHeader>Backend and system administration</SkillHeader>
-        <Skill>Python</Skill>
-        <Skill>Django</Skill>
-        <Skill>django-rest-framework</Skill>
-        <Skill>graphene-django</Skill>
-        <Skill>Flask</Skill>
-        <Skill>PostgreSQL</Skill>
-        <Skill>mySQL</Skill>
-        <Skill>Linux</Skill>
-        <Skill>Celery</Skill>
-        <Skill>Redis</Skill>
-        <Skill>AWS (EC2, RDS, S3, Lambda, etc.)</Skill>
-        <Skill>nginX</Skill>
-        <Skill>docker</Skill>
-        <Skill>docker-compose</Skill>
-        <Skill>pytest</Skill>
-        <Skill>flake8</Skill>
-        <Skill>black</Skill>
-        <Skill>invoke</Skill>
+        {mapSkills(backendSkills)}
       </SkillContainer>
       <SkillContainer>
         <SkillHeader>Frontend</SkillHeader>
-        <Skill>JavaScript</Skill>
-        <Skill>TypeScript</Skill>
-        <Skill>React</Skill>
-        <Skill>jQuery</Skill>
-        <Skill>HTML5</Skill>
-        <Skill>jest</Skill>
-        <Skill>Cypress</Skill>
-        <Skill>yarn</Skill>
-        <Skill>webpack</Skill>
+        {mapSkills(frontendSkills)}
       </SkillContainer>
       <SkillContainer>
         <SkillHeader>Others</SkillHeader>
-        <Skill>Git</Skill>
-        <Skill>Github</Skill>
-        <Skill>Gitlab</Skill>
-        <Skill>Slack</Skill>
-        <Skill>Github Actions</Skill>
-        <Skill>Jira</Skill>
-        <Skill>Pivotal Tracker</Skill>
-        <Skill>SCRUM</Skill>
-        <Skill>Agile Development</Skill>
+        {mapSkills(otherSkills)}
       </SkillContainer>
       <ArrowIcon onClick={() => fullpageApi.moveSectionDown()} />
     </Section>
