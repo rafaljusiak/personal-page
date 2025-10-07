@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { fullpageApi } from "@fullpage/react-fullpage";
+import { Link } from "gatsby";
 
 import {
   blinkCaretAnimation,
@@ -52,6 +53,37 @@ const HeaderContainer = styled.div`
   margin: auto;
 `;
 
+const CVButton = styled(Link)`
+  display: inline-block;
+  margin-top: 40px;
+  padding: 15px 40px;
+  background: transparent;
+  color: #F9ECDB;
+  border: 2px solid #F9ECDB;
+  text-decoration: none;
+  font-size: 2.5vh;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: ${fadeIn} 1s ease-in ${TYPE1_DURATION + TYPE2_DURATION + 0.5}s;
+  animation-fill-mode: forwards;
+
+  &:hover {
+    background: #F9ECDB;
+    color: #24112f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(249, 236, 219, 0.3);
+  }
+
+  ${isPortrait} {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 2vh;
+  }
+`;
+
 const automaticallyMoveToNextSection = (fpApi: fullpageApi): Function => {
   const ms = (TYPE1_DURATION + TYPE2_DURATION) * 1000;
   const moveToNextSection = () => {
@@ -79,6 +111,7 @@ export default ({ fullpageApi, fullpageState }: SectionProps) => {
       <TypeWrittenH3>
         I'm a web developer and software engineer living in Warsaw, Poland
       </TypeWrittenH3>
+      <CVButton to="/cv">View CV</CVButton>
     </Section>
   );
 };

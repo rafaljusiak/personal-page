@@ -5,7 +5,8 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && node scripts/generate-cv-pdf.js",
+    "build:gatsby": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md}\"",
     "start": "npm run develop",
@@ -28,7 +29,8 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "puppeteer": "^24.23.0"
   },
   "repository": {
     "type": "git",
