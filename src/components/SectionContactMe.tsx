@@ -1,66 +1,51 @@
 import React from "react";
 import styled from "styled-components";
-import { EnvelopeIcon } from "./common/icons";
-
-// @ts-ignore
-import GithubLogo from "../images/GitHub.png";
-// @ts-ignore
-import LinkedInLogo from "../images/LinkedIn.png";
 
 import { Footer } from "./Footer";
 import { Section } from "./Section";
 import { H2 } from "./common/tags";
 
 const ReferenceContainer = styled.div`
-  justify-content: space-around;
+  justify-content: center;
   display: flex;
-  margin: 0 35%;
-  padding: 0 3%;
+  gap: 2rem;
   @media (orientation: portrait) {
     flex-wrap: wrap;
   }
 `;
 
 const Reference = styled.a`
-  padding: 0 -45px;
-  @media (max-width: 768px) {
-    margin: 15% 0;
-  }
-`;
+  color: #f1f5f9;
+  text-decoration: none;
+  font-size: 1.2rem;
 
-const ReferenceLinkedIn = styled(Reference)`
-  @media (orientation: portrait) {
-    margin: 15% -12% 15% 0;
+  &:hover {
+    text-decoration: underline;
   }
-`;
-
-const LogoImg = styled.img`
-  height: 8vh;
-  width: auto;
 `;
 
 export default () => {
   return (
-    <Section textColor={"black"}>
+    <Section textColor={"#f1f5f9"}>
       <H2>Contact me</H2>
       <ReferenceContainer>
         <Reference rel="noopener" href="mailto:kontakt@rafaljusiak.pl">
-          <EnvelopeIcon />
+          Email
         </Reference>
         <Reference
           rel="noopener"
           href="https://github.com/rafaljusiak"
           target="_blank"
         >
-          <LogoImg src={GithubLogo} alt="Github logo" />
+          GitHub
         </Reference>
-        <ReferenceLinkedIn
+        <Reference
           rel="noopener"
-          href="https://www.linkedin.com/in/rafa%C5%82-jusiak-6b243a111/"
+          href="https://www.linkedin.com/in/rafal-jusiak/"
           target="_blank"
         >
-          <LogoImg src={LinkedInLogo} alt="LinkedIn logo" />
-        </ReferenceLinkedIn>
+          LinkedIn
+        </Reference>
       </ReferenceContainer>
       <Footer />
     </Section>

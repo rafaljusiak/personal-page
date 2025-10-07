@@ -13,13 +13,13 @@ export const H1 = styled.h1`
 `;
 
 export const H2 = styled.h2`
-  font-size: 5vh;
+  font-size: 4vh;
 
   ${isPortrait} {
-    font-size: 4vh;
+    font-size: 3.5vh;
   }
   ${isHorizontalMobile} {
-    font-size: 8vh;
+    font-size: 7vh;
   }
 `;
 
@@ -35,11 +35,11 @@ export const H3 = styled.h3`
 `;
 
 export const P = styled.p`
-  font-size: 3vh;
+  font-size: 2.5vh;
   width: 65%;
   margin-left: auto;
   margin-right: auto;
-  line-height: 180%;
+  line-height: 155%;
 
   ${isPortrait} {
     font-size: 2vh;
@@ -48,7 +48,7 @@ export const P = styled.p`
     width: 80%;
   }
   ${isHorizontalMobile} {
-    font-size: 4vh;
+    font-size: 3.5vh;
     line-height: 140%;
     width: 90%;
   }
@@ -62,9 +62,9 @@ export const OnlyHorizontalP = styled(P)`
 
 export const Strong = styled.strong`
   font-weight: 1000;
-  font-size: 3.5vh;
+  font-size: 2.8vh;
 
   ${isPortrait} {
-    font-size: 2.5vh;
+    font-size: 2.3vh;
   }
 `;

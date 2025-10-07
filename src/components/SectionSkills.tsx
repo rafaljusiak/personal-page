@@ -39,47 +39,43 @@ const Skill = styled.span`
 `;
 
 export default ({ fullpageApi }: SectionProps) => {
-  const backendSkills = [
+  const pythonSkills = [
     "Python",
     "Django",
     "django-rest-framework",
     "graphene-django",
-    "Flask",
-    "PostgreSQL",
-    "mySQL",
-    "Linux",
     "Celery",
     "Redis",
+    "asyncio",
+    "GraphQL",
+    "REST API",
+    "pytest",
+  ];
+  const infrastructureSkills = [
+    "PostgreSQL",
+    "ElasticSearch",
+    "OpenSearch",
+    "DynamoDB",
     "AWS (EC2, RDS, S3, Lambda, etc.)",
+    "Linux",
     "nginX",
     "docker",
-    "docker-compose",
-    "pytest",
-    "flake8",
-    "black",
-    "invoke",
-  ];
-  const frontendSkills = [
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "jQuery",
-    "HTML5",
-    "jest",
-    "Cypress",
-    "yarn",
-    "webpack",
+    "Gitlab CI",
+    "Github Workflows",
+    "Terraform",
+    "n8n",
   ];
   const otherSkills = [
+    "TypeScript",
+    "React",
     "Git",
     "Github",
     "Gitlab",
-    "Slack",
     "Github Actions",
     "Jira",
-    "Pivotal Tracker",
     "SCRUM",
     "Agile Development",
+    "Claude",
   ];
 
   const mapSkills = (skills: Array<string>): Array<React.ReactElement> => {
@@ -90,12 +86,12 @@ export default ({ fullpageApi }: SectionProps) => {
     <Section>
       <H2>Skills and tools</H2>
       <SkillContainer>
-        <SkillHeader>Backend and system administration</SkillHeader>
-        {mapSkills(backendSkills)}
+        <SkillHeader>Python and backend</SkillHeader>
+        {mapSkills(pythonSkills)}
       </SkillContainer>
       <SkillContainer>
-        <SkillHeader>Frontend</SkillHeader>
-        {mapSkills(frontendSkills)}
+        <SkillHeader>Infrastructure and DevOps</SkillHeader>
+        {mapSkills(infrastructureSkills)}
       </SkillContainer>
       <SkillContainer>
         <SkillHeader>Others</SkillHeader>

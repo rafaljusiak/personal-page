@@ -23,21 +23,23 @@ const typeWrittenStyles = `
   max-width: fit-content;
 `;
 
-// Animation duration in seconds
-const TYPE1_DURATION: number = 2.5;
-const TYPE2_DURATION: number = 3.5;
+const TYPING_SPEED = 14;
+const HEADLINE_TEXT = "Hi, my name is Rafał";
+const SUBHEADLINE_TEXT = "I'm a backend engineer and co-owner of Moja Matura";
+const TYPE1_DURATION: number = HEADLINE_TEXT.length / TYPING_SPEED;
+const TYPE2_DURATION: number = SUBHEADLINE_TEXT.length / TYPING_SPEED;
 
 const TypeWrittenH1 = styled(H1)`
   ${typeWrittenStyles}
-  animation: ${typingAnimation} ${TYPE1_DURATION}s steps(40, end),
-    ${blinkCaretAnimation} 0.5s step-end 4;
+  animation: ${typingAnimation} ${TYPE1_DURATION}s steps(${HEADLINE_TEXT.length}, end),
+    ${blinkCaretAnimation} 0.5s step-end 2;
   animation-fill-mode: forwards;
 `;
 
 const TypeWrittenH3 = styled(H3)`
   ${typeWrittenStyles}
-  animation: ${typingAnimation} ${TYPE2_DURATION}s steps(60, end) ${TYPE1_DURATION}s,
-    ${blinkCaretAnimation} 0.5s step-end 12;
+  animation: ${typingAnimation} ${TYPE2_DURATION}s steps(${SUBHEADLINE_TEXT.length}, end) ${TYPE1_DURATION}s,
+    ${blinkCaretAnimation} 0.75s step-end 5;
   animation-fill-mode: forwards;
 
   ${isPortrait} {
@@ -57,24 +59,25 @@ const CVButton = styled(Link)`
   display: inline-block;
   margin-top: 40px;
   padding: 15px 40px;
-  background: transparent;
-  color: #F9ECDB;
-  border: 2px solid #F9ECDB;
+  background: #60a5fa;
+  color: #0d1117;
+  border: 2px solid #60a5fa;
   text-decoration: none;
   font-size: 2.5vh;
   font-weight: 600;
-  letter-spacing: 1px;
-  border-radius: 4px;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
   transition: all 0.3s ease;
   opacity: 0;
-  animation: ${fadeIn} 1s ease-in ${TYPE1_DURATION + TYPE2_DURATION + 0.5}s;
+  animation: ${fadeIn} 1s ease-in ${TYPE1_DURATION + TYPE2_DURATION - 1.5}s;
   animation-fill-mode: forwards;
 
   &:hover {
-    background: #F9ECDB;
-    color: #24112f;
+    background: #3b82f6;
+    border-color: #3b82f6;
+    color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(249, 236, 219, 0.3);
+    box-shadow: 0 8px 20px rgba(96, 165, 250, 0.4);
   }
 
   ${isPortrait} {
@@ -106,11 +109,9 @@ export default ({ fullpageApi, fullpageState }: SectionProps) => {
   return (
     <Section>
       <HeaderContainer>
-        <TypeWrittenH1>Hi, my name is Rafał</TypeWrittenH1>
+        <TypeWrittenH1>{HEADLINE_TEXT}</TypeWrittenH1>
       </HeaderContainer>
-      <TypeWrittenH3>
-        I'm a web developer and software engineer living in Warsaw, Poland
-      </TypeWrittenH3>
+      <TypeWrittenH3>{SUBHEADLINE_TEXT}</TypeWrittenH3>
       <CVButton to="/cv">View CV</CVButton>
     </Section>
   );

@@ -4,7 +4,8 @@ import ReactFullpage, { fullpageApi } from "@fullpage/react-fullpage";
 
 const StyledDiv = styled.div`
   text-align: center;
-  font-family: "Oswald", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
 `;
 
 type Props = {
@@ -24,5 +25,5 @@ export const Section = ({ children, textColor }: Props) => (
 );
 
 Section.defaultProps = {
-  textColor: "#F9ECDB",
+  textColor: "#f1f5f9",
 }

@@ -1,6 +1,6 @@
 import { keyframes } from "styled-components";
 
-export const CARET_COLOR: string = "orange";
+export const CARET_COLOR: string = "#60a5fa";
 
 export const typingAnimation = keyframes`
   0% {

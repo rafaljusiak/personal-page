@@ -557,7 +557,7 @@ export default () => {
       </BackButton>
 
       <DownloadButton href="/cv.pdf" download="Rafał Jusiak - CV.pdf">
-        📥 Download PDF
+        Download PDF
       </DownloadButton>
     </>
   );
