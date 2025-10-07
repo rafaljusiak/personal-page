@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 
 import { Section, SectionProps } from "./Section";
 import { H2, OnlyHorizontalP, P, Strong } from "./common/tags";
-import { ArrowIcon } from "./common/icons";
 
 const StyledLink = styled.a`
   color: inherit;
@@ -16,39 +16,43 @@ const StyledLink = styled.a`
   }
 `;
 
+const CVButton = styled(Link)`
+  display: inline-block;
+  margin-top: 40px;
+  padding: 15px 40px;
+  background: #60a5fa;
+  color: #0d1117;
+  border: 2px solid #60a5fa;
+  text-decoration: none;
+  font-size: 2.5vh;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #3b82f6;
+    border-color: #3b82f6;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(96, 165, 250, 0.4);
+  }
+`;
+
 export default ({ fullpageApi }: SectionProps) => {
   return (
     <Section>
       <H2>About me</H2>
       <P>
-        <Strong>I have been using Python</Strong> programming language in my
-        daily work <Strong>since 2016</Strong> and I am constantly eager to
-        develop and explore the secrets of new solutions in this field.
+        I've been working with Python professionally since 2016 and continue to enjoy exploring new approaches and technologies in software development.
       </P>
       <P>
-        I am a <Strong>co-founder and backend developer of <StyledLink href="https://mojamatura.edu.pl" target="_blank" rel="noopener">Moja Matura</StyledLink></Strong>.
-        I specialize in <Strong>backend development</Strong> using the{" "}
-        <Strong>Django</Strong> framework, but I also have basic knowledge of
-        modern <Strong>frontend solutions (TypeScript and React.js)</Strong>. I
-        am also interested in issues related to{" "}
-        <Strong>cloud computing (AWS)</Strong>. I have a{" "}
-        <Strong>Master of Engineering degree in Computer Science</Strong> after
-        my studies at Warsaw University of Life Sciences.
+        As a co-founder and backend developer at <StyledLink href="https://mojamatura.edu.pl" target="_blank" rel="noopener">Moja Matura</StyledLink>, I focus on creating reliable and scalable backend solutions while keeping a close eye on the business value they deliver. I enjoy bridging technical excellence with practical outcomes - whether building large, high-traffic systems or lightweight MVPs.
       </P>
       <P>
-        I have experience with both{" "}
-        <Strong>big, high-traffic systems and MVPs</Strong>, working{" "}
-        <Strong>solo and in teams</Strong>. I am also a{" "}
-        <Strong>freelancer</Strong> and have made several applications for
-        individual customers "after hours". I have a{" "}
-        <Strong>business-oriented mindset</Strong>, combining technical expertise
-        with understanding of business needs.
+        My background in Computer Science (M.Eng.) from the Warsaw University of Life Sciences and my experience across team and freelance projects have shaped a balanced mindset: technical precision combined with an entrepreneurial perspective.
       </P>
-      <ArrowIcon
-        onClick={() => {
-          fullpageApi.moveSectionDown();
-        }}
-      />
+      <CVButton to="/cv">View CV</CVButton>
     </Section>
   );
 };

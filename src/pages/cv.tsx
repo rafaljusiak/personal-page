@@ -27,7 +27,7 @@ const Header = styled.header`
   border-bottom: 3px solid #24112f;
 
   @media print {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #24112f;
     margin-bottom: 15px;
     padding-bottom: 10px;
   }
@@ -42,7 +42,7 @@ const Name = styled.h1`
 
   @media print {
     font-size: 22pt;
-    color: #000;
+    color: #24112f;
     margin: 0 0 8px 0;
   }
 `;
@@ -54,7 +54,7 @@ const ContactInfo = styled.div`
 
   @media print {
     font-size: 10pt;
-    color: #000;
+    color: #555;
     margin-bottom: 5px;
   }
 `;
@@ -78,7 +78,7 @@ const Links = styled.div`
     margin-top: 3px;
 
     a {
-      color: #000;
+      color: #5330c7;
       text-decoration: none;
     }
   }
@@ -93,8 +93,8 @@ const Summary = styled.section`
   line-height: 1.7;
 
   @media print {
-    background: #fff;
-    border-left: 3px solid #000;
+    background: #f8f8f8;
+    border-left: 3px solid #5330c7;
     font-size: 10pt;
     padding: 8px;
     margin-bottom: 12px;
@@ -132,8 +132,8 @@ const SectionTitle = styled.h2`
 
   @media print {
     font-size: 14pt;
-    border-bottom: 1px solid #000;
-    color: #000;
+    border-bottom: 1px solid #24112f;
+    color: #24112f;
     margin-bottom: 8px;
     padding-bottom: 4px;
   }
@@ -164,7 +164,7 @@ const SkillCategoryTitle = styled.h3`
 
   @media print {
     font-size: 11pt;
-    color: #000;
+    color: #5330c7;
     margin-bottom: 3px;
   }
 `;
@@ -177,7 +177,7 @@ const SkillsList = styled.p`
 
   @media print {
     font-size: 9pt;
-    color: #000;
+    color: #555;
     line-height: 1.3;
   }
 `;
@@ -211,7 +211,7 @@ const JobTitle = styled.h3`
 
   @media print {
     font-size: 11pt;
-    color: #000;
+    color: #24112f;
   }
 `;
 
@@ -222,7 +222,7 @@ const DateRange = styled.span`
 
   @media print {
     font-size: 9pt;
-    color: #000;
+    color: #666;
   }
 `;
 
@@ -239,12 +239,12 @@ const WorkDescription = styled.p`
 
   @media print {
     font-size: 9pt;
-    color: #000;
+    color: #555;
     margin: 3px 0 0 0;
     line-height: 1.3;
 
     strong {
-      color: #000;
+      color: #24112f;
     }
   }
 `;
@@ -265,7 +265,7 @@ const InfoTitle = styled.h3`
 
   @media print {
     font-size: 11pt;
-    color: #000;
+    color: #24112f;
     margin: 0 0 2px 0;
   }
 `;
@@ -277,7 +277,7 @@ const InfoDetail = styled.p`
 
   @media print {
     font-size: 9pt;
-    color: #000;
+    color: #555;
     margin: 2px 0;
   }
 `;
@@ -462,6 +462,21 @@ export default () => {
 
           <WorkEntry>
             <WorkHeader>
+              <JobTitle>Co-creator and Backend Engineer, Moja Matura</JobTitle>
+              <DateRange>Nov 2019 - Present</DateRange>
+            </WorkHeader>
+            <WorkDescription>
+              Co-founded and built a web application for school-leaving exam preparation, participating in <strong>every step
+              from ideation to market introduction</strong> - including <strong>developing the MVP</strong>, refining features after initial phases,
+              <strong>implementing payment systems</strong>, <strong>handling business matters</strong>, and <strong>introducing the platform to schools</strong>.
+              Developed the backend in <strong>Django</strong> with <strong>REST</strong> and <strong>GraphQL APIs</strong>, integrated payments, analytics,
+              and school modules, and managed <strong>AWS</strong> infrastructure for scalability. The system now supports{" "}
+              <strong>over 60,000 registered users</strong> across Poland.
+            </WorkDescription>
+          </WorkEntry>
+
+          <WorkEntry>
+            <WorkHeader>
               <JobTitle>Senior Python Developer, Monterail</JobTitle>
               <DateRange>Mar 2025 - Present</DateRange>
             </WorkHeader>
@@ -477,19 +492,6 @@ export default () => {
 
           <WorkEntry>
             <WorkHeader>
-              <JobTitle>Senior Python Developer, EndySoft</JobTitle>
-              <DateRange>Jan 2025 - Feb 2025</DateRange>
-            </WorkHeader>
-            <WorkDescription>
-              Contributed to the initial development of a <strong>cloud management platform</strong> for a government-related
-              technical company, featuring <strong>multi-tenancy</strong> and role-based access control (<strong>RBAC</strong>). Built a
-              scalable <strong>REST API</strong> using <strong>Django, Django REST Framework, Django Tenants,</strong> and <strong>PostgreSQL</strong>,
-              while collaborating with a cross-functional team and assisting in onboarding new developers.
-            </WorkDescription>
-          </WorkEntry>
-
-          <WorkEntry>
-            <WorkHeader>
               <JobTitle>Senior Python Developer, HexOcean</JobTitle>
               <DateRange>Aug 2022 - Dec 2024</DateRange>
             </WorkHeader>
@@ -497,22 +499,11 @@ export default () => {
               Contributed to <strong>Braintrust</strong>, a marketplace platform connecting freelancers and employers.
               Developed and maintained a <strong>REST API</strong> using <strong>Django REST Framework, PostgreSQL,
               Elasticsearch,</strong> and <strong>Celery</strong> with <strong>Redis</strong>, while managing <strong>AWS</strong> infrastructure via <strong>Terraform</strong>.
-              Delivered key features including consolidated invoicing, feed algorithms, A/B testing, and external
-              integrations. Built internal tools and <strong>CI</strong> pipelines to automate workflows, collaborated closely with
-              the product team, and mentored developers.
-            </WorkDescription>
-          </WorkEntry>
-
-          <WorkEntry>
-            <WorkHeader>
-              <JobTitle>Co-creator and Backend Engineer, Moja Matura</JobTitle>
-              <DateRange>Nov 2019 - Present</DateRange>
-            </WorkHeader>
-            <WorkDescription>
-              Co-founded and built a web application for school-leaving exam preparation from the ground up.
-              Developed the backend in <strong>Django</strong> with <strong>REST</strong> and <strong>GraphQL APIs</strong>, integrated payments, analytics,
-              and school modules, and managed <strong>AWS</strong> infrastructure for scalability. The system now supports
-              thousands of users across Poland.
+              Took ownership of features <strong>end-to-end</strong>, from <strong>business analysis and requirements gathering</strong> through
+              development and testing to <strong>production deployment and monitoring</strong>. Delivered key features including consolidated
+              invoicing, feed algorithms, A/B testing, and external integrations. Conducted <strong>detailed code reviews</strong> to ensure
+              code quality, maintainability, and adherence to best practices. Built internal tools and <strong>CI</strong> pipelines to
+              automate workflows, collaborated closely with the product team, and mentored developers.
             </WorkDescription>
           </WorkEntry>
 
@@ -524,6 +515,8 @@ export default () => {
             <WorkDescription>
               Developed multiple web applications across diverse industries (accounting, tourism, e-commerce)
               using <strong>Django, Django REST Framework, graphene-django, AWS, React,</strong> and <strong>TypeScript</strong>.
+              <strong>Conducted recruitment calls</strong> to evaluate technical candidates and participated in <strong>initial client
+              meetings</strong> to gather requirements, discuss project scope, and provide technical consultation.
             </WorkDescription>
           </WorkEntry>
         </WorkHistorySection>

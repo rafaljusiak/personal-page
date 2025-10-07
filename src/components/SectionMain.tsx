@@ -88,7 +88,7 @@ const CVButton = styled(Link)`
 `;
 
 const automaticallyMoveToNextSection = (fpApi: fullpageApi): Function => {
-  const ms = (TYPE1_DURATION + TYPE2_DURATION) * 1000;
+  const ms = (TYPE1_DURATION + TYPE2_DURATION + 1) * 1000; // +1 second delay after typing
   const moveToNextSection = () => {
     const activeSection = fpApi.getActiveSection();
     if (activeSection.index === 0) {
@@ -112,7 +112,6 @@ export default ({ fullpageApi, fullpageState }: SectionProps) => {
         <TypeWrittenH1>{HEADLINE_TEXT}</TypeWrittenH1>
       </HeaderContainer>
       <TypeWrittenH3>{SUBHEADLINE_TEXT}</TypeWrittenH3>
-      <CVButton to="/cv">View CV</CVButton>
     </Section>
   );
 };

@@ -24,10 +24,25 @@ const Reference = styled.a`
   }
 `;
 
+const ProfileImage = styled.img`
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 2rem auto;
+  display: block;
+
+  @media (orientation: portrait) {
+    width: 180px;
+    height: 180px;
+  }
+`;
+
 export default () => {
   return (
     <Section textColor={"#f1f5f9"}>
       <H2>Contact me</H2>
+      <ProfileImage src="/me.jpeg" alt="Rafał Jusiak" />
       <ReferenceContainer>
         <Reference rel="noopener" href="mailto:kontakt@rafaljusiak.pl">
           Email

@@ -5,7 +5,6 @@ import { createGlobalStyle } from "styled-components";
 
 import SectionMain from "../components/SectionMain";
 import SectionAboutMe from "../components/SectionAboutMe";
-import SectionSkills from "../components/SectionSkills";
 import SectionContactMe from "../components/SectionContactMe";
 import { Loader } from "../components/Loader";
 
@@ -17,6 +16,29 @@ const GlobalStyle = createGlobalStyle`
 
 export default () => {
   const licenseKey = process.env.GATSBY_FULLPAGE_LICENSE_KEY;
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    // Wait for the window to fully load
+    const handleLoad = () => {
+      // Small delay to ensure fullpage is ready
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 100);
+    };
+
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+      return () => window.removeEventListener('load', handleLoad);
+    }
+  }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
   return (
     <>
       <GlobalStyle />
@@ -35,13 +57,12 @@ export default () => {
         licenseKey={licenseKey}
         navigation
         credits={{ enabled: false }}
-        sectionsColor={["#0d1117", "#1a1f35", "#312e81", "#0f172a"]}
+        sectionsColor={["#0d1117", "#1a1f35", "#0f172a"]}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>
               <SectionMain fullpageState={state} fullpageApi={fullpageApi} />
               <SectionAboutMe fullpageApi={fullpageApi} />
-              <SectionSkills fullpageApi={fullpageApi} />
               <SectionContactMe />
             </ReactFullpage.Wrapper>
           );
