@@ -2,6 +2,7 @@ import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { Helmet } from "react-helmet";
 import { createGlobalStyle } from "styled-components";
+import CookieConsent from "react-cookie-consent";
 
 import SectionMain from "../components/SectionMain";
 import SectionAboutMe from "../components/SectionAboutMe";
@@ -11,6 +12,10 @@ import { Loader } from "../components/Loader";
 const GlobalStyle = createGlobalStyle`
   .fp-watermark {
     display: none !important;
+  }
+
+  .cookie-button-wrapper {
+    margin: 0 !important;
   }
 `;
 
@@ -68,6 +73,25 @@ export default () => {
           );
         }}
       />
+      <CookieConsent
+        location="bottom"
+        buttonText="Got it"
+        style={{
+          background: "#0d1117",
+          borderTop: "1px solid rgba(96, 165, 250, 0.3)",
+        }}
+        buttonStyle={{
+          background: "#60a5fa",
+          color: "#0d1117",
+          fontWeight: "600",
+          borderRadius: "6px",
+        }}
+        contentStyle={{
+          color: "#f1f5f9",
+        }}
+      >
+        Cookies help me see how you found this site. Thanks for visiting!
+      </CookieConsent>
     </>
   );
 };

@@ -368,6 +368,7 @@ export default () => {
         <html lang="en" />
         <meta charSet="utf-8" />
         <meta name="author" content="Rafał Jusiak" />
+        <meta name="robots" content="noindex, nofollow" />
         <meta
           name="description"
           content="Rafał Jusiak - CV - Python Developer with 8 years of expertise"
