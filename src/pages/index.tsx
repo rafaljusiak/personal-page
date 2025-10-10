@@ -24,9 +24,7 @@ export default () => {
   const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
-    // Wait for the window to fully load
     const handleLoad = () => {
-      // Small delay to ensure fullpage is ready
       setTimeout(() => {
         setIsLoading(false);
       }, 100);

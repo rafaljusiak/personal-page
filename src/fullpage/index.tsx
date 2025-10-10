@@ -93,7 +93,6 @@ declare module "@fullpage/react-fullpage" {
     offsetSectionsKey?: string;
     dragAndMoveKey?: string;
     parallaxKey?: string;
-    /* end key sections */
   }
 
   export interface fullpageApi {
