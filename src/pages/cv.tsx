@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
@@ -299,7 +299,7 @@ const Footer = styled.footer`
   }
 `;
 
-const BackButton = styled(Link)`
+const BackButton = styled(Link)<{ $isScrolled: boolean }>`
   position: fixed;
   top: 30px;
   left: 30px;
@@ -314,6 +314,8 @@ const BackButton = styled(Link)`
   transition: all 0.3s ease;
   font-family: 'Oswald', sans-serif;
   letter-spacing: 1px;
+  z-index: 1000;
+  animation: bounceInLeft 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   &:hover {
     background: #5330c7;
@@ -322,7 +324,52 @@ const BackButton = styled(Link)`
   }
 
   &:active {
-    transform: translateY(0);
+    transform: scale(0.95);
+  }
+
+  @keyframes bounceInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px) scale(0.8);
+    }
+    50% {
+      transform: translateX(10px) scale(1.05);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  @media (max-width: 768px) {
+    bottom: ${props => props.$isScrolled ? '0' : '30px'};
+    left: ${props => props.$isScrolled ? '0' : '20px'};
+    top: auto;
+    padding: ${props => props.$isScrolled ? '12px 20px' : '18px 24px'};
+    font-size: ${props => props.$isScrolled ? '14px' : '15px'};
+    border-radius: ${props => props.$isScrolled ? '0 25px 0 0' : '50px'};
+    box-shadow: ${props => props.$isScrolled ? '0 -2px 10px rgba(0, 0, 0, 0.1)' : '0 4px 20px rgba(36, 17, 47, 0.3)'};
+    animation: bounceInUp 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background: ${props => props.$isScrolled ? 'rgba(36, 17, 47, 0.95)' : '#24112f'};
+    backdrop-filter: ${props => props.$isScrolled ? 'blur(10px)' : 'none'};
+
+    @keyframes bounceInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(100px) scale(0.8);
+      }
+      50% {
+        transform: translateY(-10px) scale(1.05);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
   }
 
   @media print {
@@ -330,7 +377,7 @@ const BackButton = styled(Link)`
   }
 `;
 
-const DownloadButton = styled.a`
+const DownloadButton = styled.a<{ $isScrolled: boolean }>`
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -345,6 +392,8 @@ const DownloadButton = styled.a`
   transition: all 0.3s ease;
   font-family: 'Oswald', sans-serif;
   letter-spacing: 1px;
+  z-index: 1000;
+  animation: bounceInRight 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15s both;
 
   &:hover {
     background: #24112f;
@@ -353,7 +402,51 @@ const DownloadButton = styled.a`
   }
 
   &:active {
-    transform: translateY(0);
+    transform: scale(0.95);
+  }
+
+  @keyframes bounceInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100px) scale(0.8);
+    }
+    50% {
+      transform: translateX(-10px) scale(1.05);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  @media (max-width: 768px) {
+    bottom: ${props => props.$isScrolled ? '0' : '30px'};
+    right: ${props => props.$isScrolled ? '0' : '20px'};
+    padding: ${props => props.$isScrolled ? '12px 20px' : '18px 24px'};
+    font-size: ${props => props.$isScrolled ? '14px' : '15px'};
+    border-radius: ${props => props.$isScrolled ? '25px 0 0 0' : '50px'};
+    box-shadow: ${props => props.$isScrolled ? '0 -2px 10px rgba(0, 0, 0, 0.1)' : '0 4px 20px rgba(83, 48, 199, 0.3)'};
+    animation: bounceInUp 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15s both;
+    background: ${props => props.$isScrolled ? 'rgba(83, 48, 199, 0.95)' : '#5330c7'};
+    backdrop-filter: ${props => props.$isScrolled ? 'blur(10px)' : 'none'};
+
+    @keyframes bounceInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(100px) scale(0.8);
+      }
+      50% {
+        transform: translateY(-10px) scale(1.05);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
   }
 
   @media print {
@@ -362,6 +455,18 @@ const DownloadButton = styled.a`
 `;
 
 export default () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Consider "scrolled" when user scrolls more than 50px
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -546,11 +651,11 @@ export default () => {
         </Footer>
       </CVContainer>
 
-      <BackButton to="/">
+      <BackButton to="/" $isScrolled={isScrolled}>
         ← Back
       </BackButton>
 
-      <DownloadButton href="/cv.pdf" download="Rafał Jusiak - CV.pdf">
+      <DownloadButton href="/cv.pdf" download="Rafał Jusiak - CV.pdf" $isScrolled={isScrolled}>
         Download PDF
       </DownloadButton>
     </>
