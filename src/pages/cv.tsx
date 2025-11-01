@@ -1,7 +1,51 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
+
+const slideInFromTop = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(-80px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+`;
+
+const slideInFromLeft = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+const slideInFromBottom = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+`;
+
+const slideInFromRight = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
 
 const CVContainer = styled.div`
   max-width: 900px;
@@ -25,11 +69,13 @@ const Header = styled.header`
   margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 3px solid #24112f;
+  animation: ${slideInFromTop} 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 
   @media print {
     border-bottom: 2px solid #24112f;
     margin-bottom: 15px;
     padding-bottom: 10px;
+    animation: none;
   }
 `;
 
@@ -91,6 +137,7 @@ const Summary = styled.section`
   border-left: 4px solid #5330c7;
   font-size: 15px;
   line-height: 1.7;
+  animation: ${slideInFromLeft} 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s backwards;
 
   @media print {
     background: #f8f8f8;
@@ -99,24 +146,29 @@ const Summary = styled.section`
     padding: 8px;
     margin-bottom: 12px;
     line-height: 1.4;
+    animation: none;
   }
 `;
 
 const Section = styled.section`
   margin-bottom: 35px;
+  animation: ${slideInFromBottom} 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.3s backwards;
 
   @media print {
     margin-bottom: 12px;
     page-break-inside: avoid;
+    animation: none;
   }
 `;
 
 const WorkHistorySection = styled.section`
   margin-bottom: 35px;
+  animation: ${slideInFromBottom} 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.3s backwards;
 
   @media print {
     margin-bottom: 12px;
     page-break-inside: auto;
+    animation: none;
   }
 `;
 
@@ -327,66 +379,16 @@ const baseButtonStyles = `
   }
 `;
 
-const bounceInLeftAnimation = `
-  @keyframes bounceInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-100px) scale(0.8);
-    }
-    50% {
-      transform: translateX(10px) scale(1.05);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0) scale(1);
-    }
-  }
-`;
-
-const bounceInRightAnimation = `
-  @keyframes bounceInRight {
-    0% {
-      opacity: 0;
-      transform: translateX(100px) scale(0.8);
-    }
-    50% {
-      transform: translateX(-10px) scale(1.05);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0) scale(1);
-    }
-  }
-`;
-
-const bounceInUpAnimation = `
-  @keyframes bounceInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(100px) scale(0.8);
-    }
-    50% {
-      transform: translateY(-10px) scale(1.05);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-  }
-`;
-
 const BackButton = styled(Link)<{ $isScrolled: boolean }>`
   ${baseButtonStyles}
   top: 30px;
   left: 30px;
   background: #24112f;
-  animation: bounceInLeft 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation: ${slideInFromLeft} 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s backwards;
 
   &:hover {
     background: #5330c7;
   }
-
-  ${bounceInLeftAnimation}
 
   @media (max-width: 768px) {
     bottom: ${props => props.$isScrolled ? '0' : '30px'};
@@ -396,11 +398,9 @@ const BackButton = styled(Link)<{ $isScrolled: boolean }>`
     font-size: ${props => props.$isScrolled ? '14px' : '15px'};
     border-radius: ${props => props.$isScrolled ? '0 8px 0 0' : '8px'};
     box-shadow: ${props => props.$isScrolled ? '0 -2px 10px rgba(0, 0, 0, 0.1)' : '0 4px 20px rgba(36, 17, 47, 0.3)'};
-    animation: bounceInUp 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation: ${slideInFromLeft} 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s backwards;
     background: ${props => props.$isScrolled ? 'rgba(36, 17, 47, 0.95)' : '#24112f'};
     backdrop-filter: ${props => props.$isScrolled ? 'blur(10px)' : 'none'};
-
-    ${bounceInUpAnimation}
 
     &:active {
       transform: scale(0.9);
@@ -413,13 +413,11 @@ const DownloadButton = styled.a<{ $isScrolled: boolean }>`
   bottom: 30px;
   right: 30px;
   background: #5330c7;
-  animation: bounceInRight 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15s both;
+  animation: ${slideInFromRight} 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s backwards;
 
   &:hover {
     background: #24112f;
   }
-
-  ${bounceInRightAnimation}
 
   @media (max-width: 768px) {
     bottom: ${props => props.$isScrolled ? '0' : '30px'};
@@ -428,11 +426,9 @@ const DownloadButton = styled.a<{ $isScrolled: boolean }>`
     font-size: ${props => props.$isScrolled ? '14px' : '15px'};
     border-radius: ${props => props.$isScrolled ? '8px 0 0 0' : '8px'};
     box-shadow: ${props => props.$isScrolled ? '0 -2px 10px rgba(0, 0, 0, 0.1)' : '0 4px 20px rgba(83, 48, 199, 0.3)'};
-    animation: bounceInUp 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15s both;
+    animation: ${slideInFromRight} 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s backwards;
     background: ${props => props.$isScrolled ? 'rgba(83, 48, 199, 0.95)' : '#5330c7'};
     backdrop-filter: ${props => props.$isScrolled ? 'blur(10px)' : 'none'};
-
-    ${bounceInUpAnimation}
 
     &:active {
       transform: scale(0.9);
@@ -512,7 +508,7 @@ export default () => {
             <SkillCategory>
               <SkillCategoryTitle>BACKEND TECHNOLOGIES</SkillCategoryTitle>
               <SkillsList>
-                Python, Django, Django REST Framework, Celery, Redis, asyncio, GraphQL, REST API, pytest
+                Python, Django, Django REST Framework, FastAPI, Celery, Redis, asyncio, GraphQL, REST API, pytest
               </SkillsList>
             </SkillCategory>
 
@@ -534,15 +530,13 @@ export default () => {
             <SkillCategory>
               <SkillCategoryTitle>OTHER</SkillCategoryTitle>
               <SkillsList>
-                <strong>Hands-on Frontend Development</strong> using TypeScript and React
+                <strong>Leadership &amp; Project Management:</strong> Providing technical leadership and overseeing team workflows, ensuring efficient task organization and timely delivery. Proactively improving ongoing processes, mentoring team members, and fostering a collaborative, high-performing environment.
                 <br />
-                <strong>Third-party Integrations</strong> such as Stripe, SendGrid, Google Services, Coinbase, and e-commerce
-                platforms
+                <strong>Client Collaboration &amp; Cross-functional Work:</strong> Actively engaged in gathering requirements, advising clients on technical and architectural decisions, and maintaining transparent communication throughout the project lifecycle. Working closely with developers, designers, business analysts, project managers, and product owners to align business objectives with technical execution.
                 <br />
-                <strong>Team and Project Management:</strong> Overseeing team workflows and organizing tasks
+                <strong>Third-party Integrations:</strong> Experienced in integrating external services and APIs such as Stripe, SendGrid, Google Services, Coinbase, RevenueCat, and various e-commerce platforms.
                 <br />
-                <strong>Soft Skills:</strong> Proactive problem-solving, focus on user-friendly designs, and strong communication
-                in agile and international environments
+                <strong>Hands-on Frontend Development:</strong> Building modern, responsive web applications using TypeScript and React.
               </SkillsList>
             </SkillCategory>
           </SkillsGrid>
@@ -577,7 +571,8 @@ export default () => {
               Django REST Framework, Wagtail, Elasticsearch, AWS,</strong> and <strong>Terraform</strong> on a <strong>serverless</strong> architecture.
               Additionally, initiated and led the development of a <strong>distributed task orchestration system</strong> for another
               client, designing and implementing it from scratch using <strong>Django, Celery</strong> and <strong>AWS</strong> to automate pricing
-              synchronization across multiple rental platforms, enhancing scalability and operational efficiency.
+              synchronization across multiple rental platforms, enhancing scalability and operational efficiency. <strong>Conducted
+              recruitment interviews</strong> to evaluate technical candidates.
             </WorkDescription>
           </WorkEntry>
 

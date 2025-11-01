@@ -25,8 +25,8 @@ const Reference = styled.a`
 `;
 
 const ProfileImage = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   margin: 2rem auto;

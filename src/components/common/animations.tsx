@@ -24,3 +24,25 @@ export const fadeIn = keyframes`
   0% { opacity: 0; }
   100% { opacity: 1; }
 `;
+
+export const slideUpFadeIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+export const scaleIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
