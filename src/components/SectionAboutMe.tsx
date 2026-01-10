@@ -44,13 +44,13 @@ export default ({ fullpageApi }: SectionProps) => {
     <Section>
       <H2>About me</H2>
       <P>
-        I've been working with Python professionally since 2016 and continue to enjoy exploring new approaches and technologies in software development.
+        I am a Product Engineer with commercial experience since 2016, specializing in Python, Django, and AWS. I don't just write code; I build products that drive business value.
       </P>
       <P>
-        As a co-founder and backend developer at <StyledLink href="https://mojamatura.edu.pl" target="_blank" rel="noopener">Moja Matura</StyledLink>, I focus on creating reliable and scalable backend solutions while keeping a close eye on the business value they deliver. I enjoy bridging technical excellence with practical outcomes - whether building large, high-traffic systems or lightweight MVPs.
+        As a co-founder and backend architect at <StyledLink href="https://mojamatura.edu.pl" target="_blank" rel="noopener">Moja Matura</StyledLink>, I designed and scaled a platform to a user base of 50,000+ registered users. This journey taught me how to handle everything from high-traffic system optimization to translating user needs into technical features.
       </P>
       <P>
-        My background in Computer Science (M.Eng.) from the Warsaw University of Life Sciences and my experience across team and freelance projects have shaped a balanced mindset: technical precision combined with an entrepreneurial perspective.
+        My experience spans across fintech, e-commerce, and education, where I focus on building high-quality, AI-ready backend solutions. With a Master's degree in Computer Science and an entrepreneurial mindset, I bridge the gap between technical precision and practical business outcomes — whether leading a team or building an MVP from scratch.
       </P>
       <CVButton to="/cv">View CV</CVButton>
     </Section>

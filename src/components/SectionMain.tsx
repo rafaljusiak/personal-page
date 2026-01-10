@@ -25,7 +25,7 @@ const typeWrittenStyles = `
 
 const TYPING_SPEED = 14;
 const HEADLINE_TEXT = "Hi, my name is Rafał";
-const SUBHEADLINE_TEXT = "I'm a backend engineer and co-owner of Moja Matura";
+const SUBHEADLINE_TEXT = "I'm a Backend Specialist, Product Enginner and Co-Founder of Moja Matura";
 const TYPE1_DURATION: number = HEADLINE_TEXT.length / TYPING_SPEED;
 const TYPE2_DURATION: number = SUBHEADLINE_TEXT.length / TYPING_SPEED;
 
@@ -39,7 +39,7 @@ const TypeWrittenH1 = styled(H1)`
 const TypeWrittenH3 = styled(H3)`
   ${typeWrittenStyles}
   animation: ${typingAnimation} ${TYPE2_DURATION}s steps(${SUBHEADLINE_TEXT.length}, end) ${TYPE1_DURATION}s,
-    ${blinkCaretAnimation} 0.75s step-end 5;
+    ${blinkCaretAnimation} 0.75s step-end 8;
   animation-fill-mode: forwards;
 
   ${isPortrait} {

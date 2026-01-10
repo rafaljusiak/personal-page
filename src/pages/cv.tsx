@@ -497,9 +497,7 @@ export default () => {
         </Header>
 
         <Summary>
-          Python developer with 8 years of expertise in designing and implementing high-quality software
-          solutions, contributing to projects from planning to deployment across industries such as
-          accounting, tourism, e-commerce, education, and talent marketplaces.
+          Product Engineer with commercial experience since 2016. Co-founder of Moja Matura, grown to a user base of 50,000+. I specialize in architecting high-quality Python solutions, including AI-powered backends and NLP integrations, across education, fintech, e-commerce, and talent marketplaces - from planning to cloud deployment.
         </Summary>
 
         <Section>
@@ -508,35 +506,35 @@ export default () => {
             <SkillCategory>
               <SkillCategoryTitle>BACKEND TECHNOLOGIES</SkillCategoryTitle>
               <SkillsList>
-                Python, Django, Django REST Framework, FastAPI, Celery, Redis, asyncio, GraphQL, REST API, pytest
+                Python, Django, Django REST Framework, FastAPI, Celery, RabbitMQ, Redis, asyncio, GraphQL, REST API, Pydantic, pytest
               </SkillsList>
             </SkillCategory>
 
             <SkillCategory>
               <SkillCategoryTitle>DATABASES AND SEARCH ENGINES</SkillCategoryTitle>
               <SkillsList>
-                SQL, PostgreSQL, ElasticSearch, OpenSearch, NoSQL (DynamoDB)
+                SQL, PostgreSQL, pgvector, ElasticSearch, OpenSearch, NoSQL (DynamoDB)
               </SkillsList>
             </SkillCategory>
 
             <SkillCategory>
               <SkillCategoryTitle>INFRASTRUCTURE AND DEVOPS</SkillCategoryTitle>
               <SkillsList>
-                Amazon Web Services (AWS), Linux, Docker, Continuous Integration (Gitlab CI, Github Workflows),
-                Terraform, n8n
+                Amazon Web Services (AWS), Linux, Docker, Docker Compose, Continuous Integration (Gitlab CI, Github Workflows),
+                Terraform, Grafana, n8n
               </SkillsList>
             </SkillCategory>
 
             <SkillCategory>
               <SkillCategoryTitle>OTHER</SkillCategoryTitle>
               <SkillsList>
-                <strong>Leadership &amp; Project Management:</strong> Providing technical leadership and overseeing team workflows, ensuring efficient task organization and timely delivery. Proactively improving ongoing processes, mentoring team members, and fostering a collaborative, high-performing environment.
+                <strong>Product Ownership &amp; Strategy:</strong> Leveraging my experience as a <strong>Co-founder</strong> to bridge the gap between <strong>business vision and technical execution</strong>. I take ownership of the <strong>full product lifecycle</strong>: from initial <strong>app design and prototyping</strong> to <strong>deployment and user behavior analysis</strong>. I use <strong>data-driven insights</strong> to prioritize features that deliver the most value to the users.
                 <br />
-                <strong>Client Collaboration &amp; Cross-functional Work:</strong> Actively engaged in gathering requirements, advising clients on technical and architectural decisions, and maintaining transparent communication throughout the project lifecycle. Working closely with developers, designers, business analysts, project managers, and product owners to align business objectives with technical execution.
+                <strong>Leadership &amp; Project Management:</strong> Provided <strong>technical leadership and strategic oversight</strong> of team workflows to ensure alignment with <strong>business goals</strong> and timely delivery. Drove <strong>process improvements</strong>, <strong>mentored developers</strong> and ensured smooth coordination and consistent delivery across the team.
                 <br />
-                <strong>Third-party Integrations:</strong> Experienced in integrating external services and APIs such as Stripe, SendGrid, Google Services, Coinbase, RevenueCat, and various e-commerce platforms.
+                <strong>Client Collaboration &amp; Cross-functional Work:</strong> Partnered closely with <strong>clients</strong> to define requirements and guide <strong>technical and architectural decisions</strong>. Maintained transparent communication and coordinated with <strong>design, product, and business teams</strong> to ensure solutions met both technical and commercial objectives.
                 <br />
-                <strong>Hands-on Frontend Development:</strong> Building modern, responsive web applications using TypeScript and React.
+                <strong>Third-party Integrations:</strong> Led the integration of key external services and APIs, including <strong>Stripe, SendGrid, Google Services, Coinbase, RevenueCat,</strong> and multiple <strong>e-commerce platforms</strong>.
               </SkillsList>
             </SkillCategory>
           </SkillsGrid>
@@ -547,7 +545,7 @@ export default () => {
 
           <WorkEntry>
             <WorkHeader>
-              <JobTitle>Co-creator and Backend Engineer, Moja Matura</JobTitle>
+              <JobTitle>Co-founder and Backend Engineer, Moja Matura</JobTitle>
               <DateRange>Nov 2019 - Present</DateRange>
             </WorkHeader>
             <WorkDescription>
@@ -562,17 +560,25 @@ export default () => {
 
           <WorkEntry>
             <WorkHeader>
-              <JobTitle>Senior Python Developer, Monterail</JobTitle>
-              <DateRange>Mar 2025 - Present</DateRange>
+              <JobTitle>Senior Backend Developer, SKY ENGINE AI</JobTitle>
+              <DateRange>Nov 2025 - Present</DateRange>
             </WorkHeader>
             <WorkDescription>
-              Took a <strong>leadership role</strong> in transitioning a key <strong>e-commerce platform for a leading baby food brand</strong> from
-              an external company, overseeing the technical handover and modernization of the system built with <strong>Django,
-              Django REST Framework, Wagtail, Elasticsearch, AWS,</strong> and <strong>Terraform</strong> on a <strong>serverless</strong> architecture.
-              Additionally, initiated and led the development of a <strong>distributed task orchestration system</strong> for another
-              client, designing and implementing it from scratch using <strong>Django, Celery</strong> and <strong>AWS</strong> to automate pricing
-              synchronization across multiple rental platforms, enhancing scalability and operational efficiency. <strong>Conducted
-              recruitment interviews</strong> to evaluate technical candidates.
+              Developing and maintaining backend services that power a scalable cloud platform for synthetic data generation and management - enabling the automatic creation of richly annotated image and video datasets for Vision AI. Technologies: <strong>Python, Django, Django REST Framework, asyncio, RabbitMQ</strong>.
+            </WorkDescription>
+          </WorkEntry>
+
+          <WorkEntry>
+            <WorkHeader>
+              <JobTitle>Senior Python Developer, Monterail</JobTitle>
+              <DateRange>Mar 2025 - Nov 2025</DateRange>
+            </WorkHeader>
+            <WorkDescription>
+              Took a <strong>leadership role</strong> in managing the transition and modernization of a key <strong>e-commerce platform for a
+              leading baby food brand</strong>. Oversaw all technical work, maintained strong client relationships with <strong>high responsiveness</strong> to
+              requests, and effectively managed tasks within <strong>tight budget constraints</strong>. Additionally, designed and implemented a{" "}
+              <strong>distributed task orchestration system</strong> using <strong>Django, Celery,</strong> and <strong>AWS</strong> to automate pricing
+              synchronization across rental platforms. <strong>Conducted technical interviews</strong> for new hires.
             </WorkDescription>
           </WorkEntry>
 
@@ -599,7 +605,7 @@ export default () => {
               <DateRange>Apr 2017 - Jul 2022</DateRange>
             </WorkHeader>
             <WorkDescription>
-              Developed multiple web applications across diverse industries (accounting, tourism, e-commerce)
+              Developed multiple web applications across diverse industries (accounting, tourism, healthcare, AI-generated texts)
               using <strong>Django, Django REST Framework, graphene-django, AWS, React,</strong> and <strong>TypeScript</strong>.
               <strong>Conducted recruitment calls</strong> to evaluate technical candidates and participated in <strong>initial client
               meetings</strong> to gather requirements, discuss project scope, and provide technical consultation.
