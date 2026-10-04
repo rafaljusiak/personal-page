@@ -564,7 +564,13 @@ export default () => {
               <DateRange>Nov 2025 - Present</DateRange>
             </WorkHeader>
             <WorkDescription>
-              Developing and maintaining backend services that power a scalable cloud platform for synthetic data generation and management - enabling the automatic creation of richly annotated image and video datasets for Vision AI. Technologies: <strong>Python, Django, Django REST Framework, asyncio, RabbitMQ</strong>.
+              I design and build the backend of a <strong>cloud-native, microservices-based platform</strong> for generating synthetic visual data for
+              Vision AI, used by <strong>enterprise customers</strong>. I led the design and rollout of the <strong>rendering pipeline</strong> on{" "}
+              <strong>Apache Airflow</strong>, orchestrating dozens of parallel workers on <strong>Kubernetes</strong> and <strong>AWS</strong>, and built
+              the platform's <strong>billing system from scratch</strong>, along with permissions and security. Working mainly in{" "}
+              <strong>Python (Django, DRF, asyncio)</strong> with <strong>RabbitMQ</strong> and <strong>PostgreSQL</strong>, I also own{" "}
+              <strong>production reliability</strong>, help shape the technical direction of the backend, and maintain high standards through detailed{" "}
+              <strong>code reviews</strong> in a senior-level team.
             </WorkDescription>
           </WorkEntry>
 
