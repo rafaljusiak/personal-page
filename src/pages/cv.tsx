@@ -535,6 +535,8 @@ export default () => {
                 <strong>Client Collaboration &amp; Cross-functional Work:</strong> Partnered closely with <strong>clients</strong> to define requirements and guide <strong>technical and architectural decisions</strong>. Maintained transparent communication and coordinated with <strong>design, product, and business teams</strong> to ensure solutions met both technical and commercial objectives.
                 <br />
                 <strong>Third-party Integrations:</strong> Led the integration of key external services and APIs, including <strong>Stripe, SendGrid, Google Services, Coinbase, RevenueCat,</strong> and multiple <strong>e-commerce platforms</strong>.
+                <br />
+                <strong>AI-Assisted Engineering:</strong> I use <strong>Claude Code</strong> daily to speed up exploration, refactoring and test writing, but I design, review and own every line that ships.
               </SkillsList>
             </SkillCategory>
           </SkillsGrid>
