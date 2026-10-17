@@ -1,0 +1,47 @@
+name: Deploy
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+env:
+  DEPLOY_HOST: rafaljusiak.pl
+  DEPLOY_USER: ubuntu
+  DEPLOY_PATH: /home/ubuntu/personal_page
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build site and CV PDF
+        run: npm run build
+        env:
+          GATSBY_FULLPAGE_LICENSE_KEY: ${{ secrets.GATSBY_FULLPAGE_LICENSE_KEY }}
+
+      - name: Configure SSH
+        run: |
+          install -m 700 -d ~/.ssh
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          echo "${{ secrets.DEPLOY_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+
+      - name: Upload build
+        run: rsync -az --delete public/ "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/public.new/"
+
+      - name: Swap into place
+        run: |
+          ssh "$DEPLOY_USER@$DEPLOY_HOST" "cd $DEPLOY_PATH && rm -rf public.prev && mv public public.prev && mv public.new public"
