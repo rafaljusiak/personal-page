@@ -44,6 +44,8 @@ export default ({ fullpageApi }: SectionProps) => {
     "Django",
     "django-rest-framework",
     "graphene-django",
+    "FastAPI",
+    "LiteLLM",
     "Celery",
     "Redis",
     "asyncio",

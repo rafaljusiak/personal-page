@@ -44,7 +44,7 @@ export default ({ fullpageApi }: SectionProps) => {
     <Section>
       <H2>About me</H2>
       <P>
-        I am a Product Engineer with commercial experience since 2016, specializing in Python, Django, and AWS. I don't just write code; I build products that drive business value.
+        I am a Product Engineer with commercial experience since 2017, specializing in Python, Django, and AWS. I don't just write code; I build products that drive business value.
       </P>
       <P>
         As a co-founder and backend architect at <StyledLink href="https://mojamatura.edu.pl" target="_blank" rel="noopener">Moja Matura</StyledLink>, I designed and scaled a platform to a user base of 50,000+ registered users. This journey taught me how to handle everything from high-traffic system optimization to translating user needs into technical features.
