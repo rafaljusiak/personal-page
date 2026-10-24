@@ -506,7 +506,7 @@ export default () => {
             <SkillCategory>
               <SkillCategoryTitle>BACKEND TECHNOLOGIES</SkillCategoryTitle>
               <SkillsList>
-                Python, Django, Django REST Framework, FastAPI, LiteLLM, Celery, RabbitMQ, Redis, asyncio, GraphQL, REST API, Pydantic, pytest
+                Python, Django, Django REST Framework, FastAPI, Celery, RabbitMQ, Redis, asyncio, GraphQL, REST API, Pydantic, pytest, Apache Airflow (integration), Claude Managed Agents (integration)
               </SkillsList>
             </SkillCategory>
 
@@ -555,8 +555,8 @@ export default () => {
               Vision AI, used by <strong>enterprise customers</strong>. I led the design and rollout of the <strong>rendering pipeline</strong> on{" "}
               <strong>Apache Airflow</strong>, orchestrating dozens of parallel workers on <strong>Kubernetes</strong> and <strong>AWS</strong>, and built
               the platform's <strong>billing system from scratch</strong>, along with permissions and security. Working mainly in{" "}
-              <strong>Python (Django, DRF, FastAPI, asyncio)</strong> with <strong>RabbitMQ</strong> and <strong>PostgreSQL</strong>, and integrating LLMs through{" "}
-              <strong>LiteLLM</strong>, I also own{" "}
+              <strong>Python (Django, DRF, FastAPI, asyncio)</strong> with <strong>RabbitMQ</strong> and <strong>PostgreSQL</strong>, and building integrations with{" "}
+              <strong>Apache Airflow</strong> and <strong>Claude Managed Agents</strong>, I also own{" "}
               <strong>production reliability</strong>, help shape the technical direction of the backend, and maintain high standards through detailed{" "}
               <strong>code reviews</strong> in a senior-level team.
             </WorkDescription>
