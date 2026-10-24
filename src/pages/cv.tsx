@@ -521,7 +521,7 @@ export default () => {
               <SkillCategoryTitle>INFRASTRUCTURE AND DEVOPS</SkillCategoryTitle>
               <SkillsList>
                 Amazon Web Services (AWS), Linux, Docker, Docker Compose, Continuous Integration (Gitlab CI, Github Workflows),
-                Terraform, Grafana, n8n
+                Kubernetes, Terraform, Grafana
               </SkillsList>
             </SkillCategory>
 
@@ -532,11 +532,11 @@ export default () => {
                 <br />
                 <strong>Leadership &amp; Project Management:</strong> Provided <strong>technical leadership and strategic oversight</strong> of team workflows to ensure alignment with <strong>business goals</strong> and timely delivery. Drove <strong>process improvements</strong>, <strong>mentored developers</strong> and ensured smooth coordination and consistent delivery across the team.
                 <br />
+                <strong>AI-Assisted Engineering:</strong> I write virtually all of my code with <strong>Claude Code</strong>, from exploration and refactoring to implementation and tests, while I stay the architect: I design the solution, review every change and own every line that ships.
+                <br />
                 <strong>Client Collaboration &amp; Cross-functional Work:</strong> Partnered closely with <strong>clients</strong> to define requirements and guide <strong>technical and architectural decisions</strong>. Maintained transparent communication and coordinated with <strong>design, product, and business teams</strong> to ensure solutions met both technical and commercial objectives.
                 <br />
                 <strong>Third-party Integrations:</strong> Led the integration of key external services and APIs, including <strong>Stripe, SendGrid, Google Services, Coinbase, RevenueCat, Claude Managed Agents,</strong> and multiple <strong>e-commerce platforms</strong>.
-                <br />
-                <strong>AI-Assisted Engineering:</strong> I write virtually all of my code with <strong>Claude Code</strong>, from exploration and refactoring to implementation and tests, while I stay the architect: I design the solution, review every change and own every line that ships.
               </SkillsList>
             </SkillCategory>
           </SkillsGrid>

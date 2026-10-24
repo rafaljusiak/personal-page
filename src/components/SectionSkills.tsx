@@ -64,8 +64,8 @@ export default ({ fullpageApi }: SectionProps) => {
     "docker",
     "Gitlab CI",
     "Github Workflows",
+    "Kubernetes",
     "Terraform",
-    "n8n",
   ];
   const otherSkills = [
     "TypeScript",
