@@ -547,21 +547,6 @@ export default () => {
 
           <WorkEntry>
             <WorkHeader>
-              <JobTitle>Co-founder and Backend Engineer, Moja Matura</JobTitle>
-              <DateRange>Nov 2019 - Present</DateRange>
-            </WorkHeader>
-            <WorkDescription>
-              Co-founded and built a web application for school-leaving exam preparation, participating in <strong>every step
-              from ideation to market introduction</strong> - including <strong>developing the MVP</strong>, refining features after initial phases,
-              <strong>implementing payment systems</strong>, <strong>handling business matters</strong>, and <strong>introducing the platform to schools</strong>.
-              Developed the backend in <strong>Django</strong> with <strong>REST</strong> and <strong>GraphQL APIs</strong>, integrated payments, analytics,
-              and school modules, and managed <strong>AWS</strong> infrastructure for scalability. The system now supports{" "}
-              <strong>over 50,000 registered users</strong> across Poland.
-            </WorkDescription>
-          </WorkEntry>
-
-          <WorkEntry>
-            <WorkHeader>
               <JobTitle>Senior Backend Developer, SKY ENGINE AI</JobTitle>
               <DateRange>Nov 2025 - Present</DateRange>
             </WorkHeader>
@@ -574,6 +559,21 @@ export default () => {
               <strong>LiteLLM</strong>, I also own{" "}
               <strong>production reliability</strong>, help shape the technical direction of the backend, and maintain high standards through detailed{" "}
               <strong>code reviews</strong> in a senior-level team.
+            </WorkDescription>
+          </WorkEntry>
+
+          <WorkEntry>
+            <WorkHeader>
+              <JobTitle>Co-founder and Backend Engineer, Moja Matura</JobTitle>
+              <DateRange>Nov 2019 - Present</DateRange>
+            </WorkHeader>
+            <WorkDescription>
+              Co-founded and built a web application for school-leaving exam preparation, participating in <strong>every step
+              from ideation to market introduction</strong> - including <strong>developing the MVP</strong>, refining features after initial phases,
+              <strong>implementing payment systems</strong>, <strong>handling business matters</strong>, and <strong>introducing the platform to schools</strong>.
+              Developed the backend in <strong>Django</strong> with <strong>REST</strong> and <strong>GraphQL APIs</strong>, integrated payments, analytics,
+              and school modules, and managed <strong>AWS</strong> infrastructure for scalability. The system now supports{" "}
+              <strong>over 50,000 registered users</strong> across Poland.
             </WorkDescription>
           </WorkEntry>
 
