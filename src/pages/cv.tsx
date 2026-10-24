@@ -506,7 +506,7 @@ export default () => {
             <SkillCategory>
               <SkillCategoryTitle>BACKEND TECHNOLOGIES</SkillCategoryTitle>
               <SkillsList>
-                Python, Django, Django REST Framework, FastAPI, Celery, RabbitMQ, Redis, asyncio, GraphQL, REST API, Pydantic, pytest, Apache Airflow (integration), Claude Managed Agents (integration)
+                Python, Django, Django REST Framework, Apache Airflow, FastAPI, Celery, RabbitMQ, Redis, asyncio, GraphQL, REST API, Pydantic, pytest
               </SkillsList>
             </SkillCategory>
 
@@ -534,7 +534,7 @@ export default () => {
                 <br />
                 <strong>Client Collaboration &amp; Cross-functional Work:</strong> Partnered closely with <strong>clients</strong> to define requirements and guide <strong>technical and architectural decisions</strong>. Maintained transparent communication and coordinated with <strong>design, product, and business teams</strong> to ensure solutions met both technical and commercial objectives.
                 <br />
-                <strong>Third-party Integrations:</strong> Led the integration of key external services and APIs, including <strong>Stripe, SendGrid, Google Services, Coinbase, RevenueCat,</strong> and multiple <strong>e-commerce platforms</strong>.
+                <strong>Third-party Integrations:</strong> Led the integration of key external services and APIs, including <strong>Stripe, SendGrid, Google Services, Coinbase, RevenueCat, Claude Managed Agents,</strong> and multiple <strong>e-commerce platforms</strong>.
                 <br />
                 <strong>AI-Assisted Engineering:</strong> I write virtually all of my code with <strong>Claude Code</strong>, from exploration and refactoring to implementation and tests, while I stay the architect: I design the solution, review every change and own every line that ships.
               </SkillsList>
@@ -555,8 +555,7 @@ export default () => {
               Vision AI, used by <strong>enterprise customers</strong>. I led the design and rollout of the <strong>rendering pipeline</strong> on{" "}
               <strong>Apache Airflow</strong>, orchestrating dozens of parallel workers on <strong>Kubernetes</strong> and <strong>AWS</strong>, and built
               the platform's <strong>billing system from scratch</strong>, along with permissions and security. Working mainly in{" "}
-              <strong>Python (Django, DRF, FastAPI, asyncio)</strong> with <strong>RabbitMQ</strong> and <strong>PostgreSQL</strong>, and building integrations with{" "}
-              <strong>Apache Airflow</strong> and <strong>Claude Managed Agents</strong>, I also own{" "}
+              <strong>Python (Django, DRF, FastAPI, asyncio)</strong> with <strong>RabbitMQ</strong> and <strong>PostgreSQL</strong>, I also own{" "}
               <strong>production reliability</strong>, help shape the technical direction of the backend, and maintain high standards through detailed{" "}
               <strong>code reviews</strong> in a senior-level team.
             </WorkDescription>
