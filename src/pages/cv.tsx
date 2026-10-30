@@ -497,7 +497,7 @@ export default () => {
         </Header>
 
         <Summary>
-          Product Engineer with commercial experience since 2017. Co-founder of Moja Matura, grown to a user base of 50,000+. I architect high-quality Python backends - from planning to cloud deployment - across education, fintech, e-commerce, and talent marketplaces, and today I build the engine of a synthetic data generation platform that produces photorealistic training data for Vision AI, alongside AI-powered backends and LLM integrations.
+          Product Engineer with commercial experience since 2017. Co-founder of Moja Matura, grown to a user base of 50,000+. I architect high-quality Python backends - from planning to cloud deployment - across education, fintech, e-commerce, and talent marketplaces, and today I build the engine of a synthetic data generation platform that produces photorealistic training data for Vision AI, alongside AI-powered backends and LLM integrations. I take full ownership of every task I'm given, from design to production.
         </Summary>
 
         <Section>
@@ -506,7 +506,7 @@ export default () => {
             <SkillCategory>
               <SkillCategoryTitle>BACKEND TECHNOLOGIES</SkillCategoryTitle>
               <SkillsList>
-                Python, Django, Django REST Framework, Apache Airflow, FastAPI, Celery, RabbitMQ, Redis, asyncio, GraphQL, REST API, Pydantic, pytest
+                Python, Django, Django REST Framework, Apache Airflow, FastAPI, Celery, RabbitMQ, Redis, asyncio, GraphQL, WebSockets, REST API, Microservices, Event-Driven Architecture, Pydantic, pytest
               </SkillsList>
             </SkillCategory>
 

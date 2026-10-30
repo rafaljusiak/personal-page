@@ -50,7 +50,7 @@ export default ({ fullpageApi }: SectionProps) => {
         As a co-founder and backend architect at <StyledLink href="https://mojamatura.edu.pl" target="_blank" rel="noopener">Moja Matura</StyledLink>, I designed and scaled a platform to a user base of 50,000+ registered users. This journey taught me how to handle everything from high-traffic system optimization to translating user needs into technical features.
       </P>
       <P>
-        My experience spans across fintech, e-commerce, and education, where I focus on building high-quality, AI-ready backend solutions. With a Master's degree in Computer Science and an entrepreneurial mindset, I bridge the gap between technical precision and practical business outcomes — whether leading a team or building an MVP from scratch.
+        My experience spans across fintech, e-commerce, and education, where I focus on building high-quality, AI-ready backend solutions, most recently scalable, microservice-based backends powering rendering pipelines and data platforms. With a Master's degree in Computer Science and an entrepreneurial mindset, I bridge the gap between technical precision and practical business outcomes, whether leading a team or building an MVP from scratch.
       </P>
       <CVButton to="/cv">View CV</CVButton>
     </Section>

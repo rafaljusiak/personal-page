@@ -47,10 +47,14 @@ export default ({ fullpageApi }: SectionProps) => {
     "Apache Airflow",
     "FastAPI",
     "Celery",
+    "RabbitMQ",
     "Redis",
     "asyncio",
     "GraphQL",
+    "WebSockets",
     "REST API",
+    "Microservices",
+    "Event-Driven Architecture",
     "pytest",
   ];
   const infrastructureSkills = [
