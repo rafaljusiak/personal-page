@@ -497,7 +497,7 @@ export default () => {
         </Header>
 
         <Summary>
-          Product Engineer with commercial experience since 2017. Co-founder of Moja Matura, grown to a user base of 50,000+. I architect high-quality Python backends - from planning to cloud deployment - across education, fintech, e-commerce, and talent marketplaces, and today I build the engine of a synthetic data generation platform that produces photorealistic training data for Vision AI, alongside AI-powered backends and LLM integrations. I take full ownership of every task I'm given, from design to production.
+          Senior Backend Engineer with commercial experience since 2017 and Co-founder of Moja Matura, grown to a user base of 50,000+. I architect high-quality Python backends from planning to cloud deployment, across education, fintech, e-commerce and talent marketplaces, and today I build the engine of a synthetic data generation platform producing photorealistic training data for Vision AI. I also bring <strong>leadership and management experience</strong>: leading small development teams, owning features <strong>end-to-end</strong>, coordinating and verifying other developers' work, <strong>mentoring</strong> and running <strong>technical interviews</strong>, and acting as the main technical contact for <strong>clients</strong>. I take ownership of quality and outcome, not just of my own slice of the work.
         </Summary>
 
         <Section>
@@ -528,13 +528,13 @@ export default () => {
             <SkillCategory>
               <SkillCategoryTitle>OTHER</SkillCategoryTitle>
               <SkillsList>
+                <strong>Technical Leadership &amp; Team Management:</strong> Led <strong>small development teams and feature squads</strong>: planning and distributing work, overseeing and verifying what the team delivered, unblocking people and <strong>mentoring developers</strong>, keeping delivery aligned with <strong>business goals</strong>. Set and upheld <strong>engineering standards through detailed code reviews</strong>, challenging designs and technical decisions that needed stronger justification. Drove <strong>process improvements</strong> and <strong>conducted technical interviews</strong> for new hires.
+                <br />
                 <strong>Product Ownership &amp; Strategy:</strong> Leveraging my experience as a <strong>Co-founder</strong> to bridge the gap between <strong>business vision and technical execution</strong>. I take ownership of the <strong>full product lifecycle</strong>: from initial <strong>app design and prototyping</strong> to <strong>deployment and user behavior analysis</strong>. I use <strong>data-driven insights</strong> to prioritize features that deliver the most value to the users.
                 <br />
-                <strong>Leadership &amp; Project Management:</strong> Provided <strong>technical leadership and strategic oversight</strong> of team workflows to ensure alignment with <strong>business goals</strong> and timely delivery. Drove <strong>process improvements</strong>, <strong>mentored developers</strong> and ensured smooth coordination and consistent delivery across the team.
+                <strong>AI-Assisted Engineering:</strong> I write virtually all of my code with <strong>Claude Code</strong>, from exploration and refactoring to implementation and tests, while I stay the architect: I design the solution, review every change and own every line that ships. I keep looking for ways to apply <strong>AI and automation</strong> to raise engineering efficiency, across agent workflows, <strong>CI/CD</strong> and tooling.
                 <br />
-                <strong>AI-Assisted Engineering:</strong> I write virtually all of my code with <strong>Claude Code</strong>, from exploration and refactoring to implementation and tests, while I stay the architect: I design the solution, review every change and own every line that ships.
-                <br />
-                <strong>Client Collaboration &amp; Cross-functional Work:</strong> Partnered closely with <strong>clients</strong> to define requirements and guide <strong>technical and architectural decisions</strong>. Maintained transparent communication and coordinated with <strong>design, product, and business teams</strong> to ensure solutions met both technical and commercial objectives.
+                <strong>Client Collaboration &amp; Cross-functional Work:</strong> Partnered closely with <strong>clients</strong> to define requirements and guide <strong>technical and architectural decisions</strong>, <strong>translating technical trade-offs into business language</strong>. Maintained transparent communication and coordinated with <strong>design, product, and business teams</strong>, as well as with a <strong>client's other subcontractors</strong>, to ensure solutions met both technical and commercial objectives.
                 <br />
                 <strong>Third-party Integrations:</strong> Led the integration of key external services and APIs, including <strong>Stripe, SendGrid, Google Services, Coinbase, RevenueCat, Claude Managed Agents,</strong> and multiple <strong>e-commerce platforms</strong>.
               </SkillsList>
@@ -568,7 +568,7 @@ export default () => {
             </WorkHeader>
             <WorkDescription>
               Co-founded and built a web application for school-leaving exam preparation, participating in <strong>every step
-              from ideation to market introduction</strong> - including <strong>developing the MVP</strong>, refining features after initial phases,
+              from ideation to market introduction</strong>, including <strong>developing the MVP</strong>, refining features after initial phases,
               <strong>implementing payment systems</strong>, <strong>handling business matters</strong>, and <strong>introducing the platform to schools</strong>.
               Developed the backend in <strong>Django</strong> with <strong>REST</strong> and <strong>GraphQL APIs</strong>, integrated payments, analytics,
               and school modules, and managed <strong>AWS</strong> infrastructure for scalability. The system now supports{" "}
@@ -582,9 +582,10 @@ export default () => {
               <DateRange>Mar 2025 - Nov 2025</DateRange>
             </WorkHeader>
             <WorkDescription>
-              Took a <strong>leadership role</strong> in managing the transition and modernization of a key <strong>e-commerce platform for a
-              leading baby food brand</strong>. Oversaw all technical work, maintained strong client relationships with <strong>high responsiveness</strong> to
-              requests, and effectively managed tasks within <strong>tight budget constraints</strong>. Additionally, designed and implemented a{" "}
+              Was the <strong>main person responsible for development</strong> on the transition and modernization of a key <strong>e-commerce platform for a
+              leading baby food brand</strong>, taking a <strong>leadership role</strong> over all technical work. <strong>Coordinated the work directly
+              with the client</strong>, communicated with the <strong>client's other subcontractors</strong>, and managed tasks within{" "}
+              <strong>tight budget constraints</strong>. Additionally, designed and implemented a{" "}
               <strong>distributed task orchestration system</strong> using <strong>Django, Celery,</strong> and <strong>AWS</strong> to automate pricing
               synchronization across rental platforms. <strong>Conducted technical interviews</strong> for new hires.
             </WorkDescription>
@@ -599,11 +600,13 @@ export default () => {
               Contributed to <strong>Braintrust</strong>, a marketplace platform connecting freelancers and employers.
               Developed and maintained a <strong>REST API</strong> using <strong>Django REST Framework, PostgreSQL,
               Elasticsearch,</strong> and <strong>Celery</strong> with <strong>Redis</strong>, while managing <strong>AWS</strong> infrastructure via <strong>Terraform</strong>.
-              Took ownership of features <strong>end-to-end</strong>, from <strong>business analysis and requirements gathering</strong> through
-              development and testing to <strong>production deployment and monitoring</strong>. Delivered key features including consolidated
-              invoicing, feed algorithms, A/B testing, and external integrations. Conducted <strong>detailed code reviews</strong> to ensure
-              code quality, maintainability, and adherence to best practices. Built internal tools and <strong>CI</strong> pipelines to
-              automate workflows, collaborated closely with the product team, and mentored developers.
+              Acted as <strong>feature owner</strong>, always with <strong>several developers working under me</strong>, whose work I coordinated and
+              verified through <strong>detailed code reviews</strong>. Took ownership of
+              features <strong>end-to-end</strong>, from <strong>business analysis and requirements gathering</strong> through development and testing to{" "}
+              <strong>production deployment and monitoring</strong>. Delivered key features including consolidated invoicing, feed algorithms,
+              A/B testing, and external integrations, holding the line on code quality, maintainability, and adherence to best practices.
+              Built internal tools and <strong>CI</strong> pipelines to automate workflows, collaborated closely with the product team, and{" "}
+              <strong>mentored developers</strong>.
             </WorkDescription>
           </WorkEntry>
 
@@ -615,8 +618,9 @@ export default () => {
             <WorkDescription>
               Developed multiple web applications across diverse industries (accounting, tourism, healthcare, AI-generated texts)
               using <strong>Django, Django REST Framework, graphene-django, AWS, React,</strong> and <strong>TypeScript</strong>.
-              <strong>Conducted recruitment calls</strong> to evaluate technical candidates and participated in <strong>initial client
-              meetings</strong> to gather requirements, discuss project scope, and provide technical consultation.
+              Beyond my own main project, I <strong>supported other teams in a leadership capacity</strong>, helping them with technical
+              decisions and unblocking their work. <strong>Conducted recruitment calls</strong> to evaluate technical candidates and
+              took part in <strong>client meetings</strong> to gather requirements, discuss project scope, and provide technical consultation.
             </WorkDescription>
           </WorkEntry>
         </WorkHistorySection>
