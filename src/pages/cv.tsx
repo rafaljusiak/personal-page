@@ -73,8 +73,8 @@ const Header = styled.header`
 
   @media print {
     border-bottom: 2px solid #24112f;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 7px;
     animation: none;
   }
 `;
@@ -87,9 +87,9 @@ const Name = styled.h1`
   letter-spacing: 2px;
 
   @media print {
-    font-size: 22pt;
+    font-size: 19pt;
     color: #24112f;
-    margin: 0 0 8px 0;
+    margin: 0 0 5px 0;
   }
 `;
 
@@ -101,7 +101,7 @@ const ContactInfo = styled.div`
   @media print {
     font-size: 10pt;
     color: #555;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
   }
 `;
 
@@ -121,7 +121,7 @@ const Links = styled.div`
 
   @media print {
     font-size: 10pt;
-    margin-top: 3px;
+    margin-top: 2px;
 
     a {
       color: #5330c7;
@@ -143,8 +143,8 @@ const Summary = styled.section`
     background: #f8f8f8;
     border-left: 3px solid #5330c7;
     font-size: 10pt;
-    padding: 8px;
-    margin-bottom: 12px;
+    padding: 6px 8px;
+    margin-bottom: 9px;
     line-height: 1.4;
     animation: none;
   }
@@ -155,7 +155,7 @@ const Section = styled.section`
   animation: ${slideInFromBottom} 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.3s backwards;
 
   @media print {
-    margin-bottom: 12px;
+    margin-bottom: 9px;
     page-break-inside: avoid;
     animation: none;
   }
@@ -166,7 +166,7 @@ const WorkHistorySection = styled.section`
   animation: ${slideInFromBottom} 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.3s backwards;
 
   @media print {
-    margin-bottom: 12px;
+    margin-bottom: 9px;
     page-break-inside: auto;
     animation: none;
   }
@@ -183,11 +183,13 @@ const SectionTitle = styled.h2`
   letter-spacing: 1px;
 
   @media print {
-    font-size: 14pt;
+    font-size: 13pt;
     border-bottom: 1px solid #24112f;
     color: #24112f;
-    margin-bottom: 8px;
-    padding-bottom: 4px;
+    margin-bottom: 5px;
+    padding-bottom: 3px;
+    page-break-after: avoid;
+    break-after: avoid;
   }
 `;
 
@@ -196,7 +198,7 @@ const SkillsGrid = styled.div`
   gap: 20px;
 
   @media print {
-    gap: 6px;
+    gap: 3px;
   }
 `;
 
@@ -204,7 +206,7 @@ const SkillCategory = styled.div`
   margin-bottom: 15px;
 
   @media print {
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
 `;
 
@@ -215,9 +217,9 @@ const SkillCategoryTitle = styled.h3`
   color: #5330c7;
 
   @media print {
-    font-size: 11pt;
+    font-size: 9.5pt;
     color: #5330c7;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
 `;
 
@@ -230,7 +232,7 @@ const SkillsList = styled.p`
   @media print {
     font-size: 9pt;
     color: #555;
-    line-height: 1.3;
+    line-height: 1.25;
   }
 `;
 
@@ -239,7 +241,7 @@ const WorkEntry = styled.div`
   page-break-inside: avoid;
 
   @media print {
-    margin-bottom: 10px;
+    margin-bottom: 9px;
   }
 `;
 
@@ -251,7 +253,7 @@ const WorkHeader = styled.div`
   flex-wrap: wrap;
 
   @media print {
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
 `;
 
@@ -292,8 +294,8 @@ const WorkDescription = styled.p`
   @media print {
     font-size: 9pt;
     color: #555;
-    margin: 3px 0 0 0;
-    line-height: 1.3;
+    margin: 2px 0 0 0;
+    line-height: 1.25;
 
     strong {
       color: #24112f;
@@ -343,8 +345,8 @@ const Footer = styled.footer`
   line-height: 1.5;
 
   @media print {
-    margin-top: 15px;
-    padding-top: 8px;
+    margin-top: 12px;
+    padding-top: 6px;
     font-size: 7pt;
     color: #666;
     line-height: 1.3;
@@ -528,15 +530,13 @@ export default () => {
             <SkillCategory>
               <SkillCategoryTitle>OTHER</SkillCategoryTitle>
               <SkillsList>
-                <strong>Technical Leadership &amp; Team Management:</strong> Led <strong>small development teams and feature squads</strong>: planning and distributing work, overseeing and verifying what the team delivered, unblocking people and <strong>mentoring developers</strong>, keeping delivery aligned with <strong>business goals</strong>. Set and upheld <strong>engineering standards through detailed code reviews</strong>, challenging designs and technical decisions that needed stronger justification. Drove <strong>process improvements</strong> and <strong>conducted technical interviews</strong> for new hires.
+                <strong>Technical Leadership &amp; Team Management:</strong> Led <strong>small development teams and feature squads</strong>: distributing work, verifying what the team delivered, unblocking people and <strong>mentoring developers</strong>. Set and upheld <strong>engineering standards through detailed code reviews</strong>, challenged designs that needed stronger justification, drove <strong>process improvements</strong> and <strong>conducted technical interviews</strong>.
                 <br />
-                <strong>Product Ownership &amp; Strategy:</strong> Leveraging my experience as a <strong>Co-founder</strong> to bridge the gap between <strong>business vision and technical execution</strong>. I take ownership of the <strong>full product lifecycle</strong>: from initial <strong>app design and prototyping</strong> to <strong>deployment and user behavior analysis</strong>. I use <strong>data-driven insights</strong> to prioritize features that deliver the most value to the users.
+                <strong>Product Ownership &amp; Strategy:</strong> As a <strong>Co-founder</strong> I bridge <strong>business vision and technical execution</strong>, owning the <strong>full product lifecycle</strong> from <strong>design and prototyping</strong> to <strong>deployment and user behavior analysis</strong>, using <strong>data-driven insights</strong> to prioritize what delivers the most value.
                 <br />
-                <strong>AI-Assisted Engineering:</strong> I write virtually all of my code with <strong>Claude Code</strong>, from exploration and refactoring to implementation and tests, while I stay the architect: I design the solution, review every change and own every line that ships. I keep looking for ways to apply <strong>AI and automation</strong> to raise engineering efficiency, across agent workflows, <strong>CI/CD</strong> and tooling.
+                <strong>AI-Assisted Engineering:</strong> I write virtually all of my code with <strong>Claude Code</strong> while staying the architect: I design the solution, review every change and own every line that ships. I keep applying <strong>AI and automation</strong> to raise engineering efficiency, across agent workflows, <strong>CI/CD</strong> and tooling.
                 <br />
-                <strong>Client Collaboration &amp; Cross-functional Work:</strong> Partnered closely with <strong>clients</strong> to define requirements and guide <strong>technical and architectural decisions</strong>, <strong>translating technical trade-offs into business language</strong>. Maintained transparent communication and coordinated with <strong>design, product, and business teams</strong>, as well as with a <strong>client's other subcontractors</strong>, to ensure solutions met both technical and commercial objectives.
-                <br />
-                <strong>Third-party Integrations:</strong> Led the integration of key external services and APIs, including <strong>Stripe, SendGrid, Google Services, Coinbase, RevenueCat, Claude Managed Agents,</strong> and multiple <strong>e-commerce platforms</strong>.
+                <strong>Client Collaboration &amp; Cross-functional Work:</strong> Partnered closely with <strong>clients</strong> to define requirements and guide <strong>technical and architectural decisions</strong>, <strong>translating technical trade-offs into business language</strong>, and coordinated with <strong>design, product and business teams</strong> as well as a <strong>client's other subcontractors</strong>.
               </SkillsList>
             </SkillCategory>
           </SkillsGrid>
