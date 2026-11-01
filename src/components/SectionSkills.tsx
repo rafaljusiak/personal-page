@@ -81,7 +81,8 @@ export default ({ fullpageApi }: SectionProps) => {
     "Jira",
     "SCRUM",
     "Agile Development",
-    "Claude",
+    "Anthropic Claude",
+    "Claude Code",
   ];
 
   const mapSkills = (skills: Array<string>): Array<React.ReactElement> => {

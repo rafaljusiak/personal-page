@@ -508,7 +508,7 @@ export default () => {
             <SkillCategory>
               <SkillCategoryTitle>BACKEND TECHNOLOGIES</SkillCategoryTitle>
               <SkillsList>
-                Python, Django, Django REST Framework, Apache Airflow, FastAPI, Celery, RabbitMQ, Redis, asyncio, GraphQL, WebSockets, REST API, Microservices, Event-Driven Architecture, Pydantic, pytest
+                Python, Django, Django REST Framework, Apache Airflow, FastAPI, Celery, RabbitMQ, Redis, asyncio, GraphQL, WebSockets, REST API, Microservices, Event-Driven Architecture, Pydantic, pytest, Anthropic Claude API, Claude Code
               </SkillsList>
             </SkillCategory>
 
