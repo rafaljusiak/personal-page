@@ -69,11 +69,11 @@ const Header = styled.header`
   text-align: center;
   margin-bottom: 30px;
   padding-bottom: 20px;
-  border-bottom: 3px solid #24112f;
+  border-bottom: 3px solid #1b2638;
   animation: ${slideInFromTop} 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 
   @media print {
-    border-bottom: 2px solid #24112f;
+    border-bottom: 2px solid #1b2638;
     margin-bottom: 10pt;
     padding-bottom: 7pt;
     animation: none;
@@ -84,7 +84,7 @@ const Name = styled.h1`
   font-size: 42px;
   font-weight: 700;
   margin: 0 0 10px 0;
-  color: #24112f;
+  color: #1b2638;
   letter-spacing: 2px;
 
   @media (max-width: 600px) {
@@ -93,7 +93,7 @@ const Name = styled.h1`
 
   @media print {
     font-size: 22pt;
-    color: #24112f;
+    color: #1b2638;
     margin: 0 0 3pt 0;
     line-height: 1.1;
   }
@@ -103,7 +103,7 @@ const Tagline = styled.div`
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 14px;
-  color: #24112f;
+  color: #1b2638;
   text-wrap: balance;
 
   @media (max-width: 600px) {
@@ -112,7 +112,7 @@ const Tagline = styled.div`
 
   @media print {
     font-size: 11.5pt;
-    color: #24112f;
+    color: #1b2638;
     margin-bottom: 4pt;
     line-height: 1.25;
   }
@@ -136,7 +136,7 @@ const Links = styled.div`
   margin-top: 5px;
 
   a {
-    color: #5330c7;
+    color: #1e4694;
     text-decoration: none;
     margin: 0 10px;
     white-space: nowrap;
@@ -162,7 +162,7 @@ const Links = styled.div`
     margin-top: 1pt;
 
     a {
-      color: #5330c7;
+      color: #1e4694;
       text-decoration: none;
     }
   }
@@ -172,14 +172,14 @@ const Summary = styled.section`
   margin-bottom: 30px;
   padding: 20px;
   background: #f8f8f8;
-  border-left: 4px solid #5330c7;
+  border-left: 4px solid #1e4694;
   font-size: 15px;
   line-height: 1.7;
   animation: ${slideInFromLeft} 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s backwards;
 
   @media print {
     background: #f8f8f8;
-    border-left: 3px solid #5330c7;
+    border-left: 3px solid #1e4694;
     font-size: 10pt;
     padding: 6pt 9pt;
     margin-bottom: 14pt;
@@ -216,8 +216,8 @@ const SectionTitle = styled.h2`
   font-weight: 700;
   margin-bottom: 15px;
   padding-bottom: 8px;
-  border-bottom: 2px solid #24112f;
-  color: #24112f;
+  border-bottom: 2px solid #1b2638;
+  color: #1b2638;
   text-transform: uppercase;
   letter-spacing: 1px;
 
@@ -227,8 +227,8 @@ const SectionTitle = styled.h2`
 
   @media print {
     font-size: 12pt;
-    border-bottom: 1px solid #24112f;
-    color: #24112f;
+    border-bottom: 1px solid #1b2638;
+    color: #1b2638;
     margin: 0 0 6pt 0;
     padding-bottom: 2pt;
     line-height: 1.2;
@@ -269,7 +269,7 @@ const SkillCategoryTitle = styled.h3`
   letter-spacing: 0.5px;
   margin: 0;
   line-height: 1.6;
-  color: #5330c7;
+  color: #1e4694;
 
   @media (max-width: 600px) {
     margin-bottom: 2px;
@@ -278,7 +278,7 @@ const SkillCategoryTitle = styled.h3`
   @media print {
     font-size: 8pt;
     letter-spacing: 0.2pt;
-    color: #5330c7;
+    color: #1e4694;
     line-height: 1.75;
   }
 `;
@@ -337,7 +337,7 @@ const JobTitle = styled.h3`
   font-size: 19px;
   font-weight: 700;
   margin: 0;
-  color: #24112f;
+  color: #1b2638;
   line-height: 1.35;
 
   @media (max-width: 600px) {
@@ -346,17 +346,17 @@ const JobTitle = styled.h3`
 
   @media print {
     font-size: 11.5pt;
-    color: #24112f;
+    color: #1b2638;
     line-height: 1.25;
   }
 `;
 
 const Company = styled.span`
-  color: #5330c7;
+  color: #1e4694;
   white-space: nowrap;
 
   @media print {
-    color: #5330c7;
+    color: #1e4694;
   }
 `;
 
@@ -382,7 +382,7 @@ const WorkDescription = styled.p`
   font-style: italic;
 
   strong {
-    color: #24112f;
+    color: #1b2638;
     font-weight: 600;
   }
 
@@ -394,7 +394,7 @@ const WorkDescription = styled.p`
     line-height: 1.4;
 
     strong {
-      color: #24112f;
+      color: #1b2638;
     }
   }
 `;
@@ -412,12 +412,12 @@ const BulletList = styled.ul`
 
   strong,
   b {
-    color: #24112f;
+    color: #1b2638;
     font-weight: 600;
   }
 
   li::marker {
-    color: #5330c7;
+    color: #1e4694;
   }
 
   @media print {
@@ -432,7 +432,7 @@ const BulletList = styled.ul`
 
     strong,
     b {
-      color: #24112f;
+      color: #1b2638;
     }
   }
 `;
@@ -472,11 +472,11 @@ const InfoTitle = styled.h3`
   font-size: 16px;
   font-weight: 600;
   margin: 0 0 5px 0;
-  color: #24112f;
+  color: #1b2638;
 
   @media print {
     font-size: 10.5pt;
-    color: #24112f;
+    color: #1b2638;
     margin: 0 0 1pt 0;
   }
 `;
@@ -542,11 +542,11 @@ const BackButton = styled(Link)<{ $isScrolled: boolean }>`
   ${baseButtonStyles}
   top: 30px;
   left: 30px;
-  background: #24112f;
+  background: #1b2638;
   animation: ${slideInFromLeft} 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s backwards;
 
   &:hover {
-    background: #5330c7;
+    background: #1e4694;
   }
 
   @media (max-width: 768px) {
@@ -556,9 +556,9 @@ const BackButton = styled(Link)<{ $isScrolled: boolean }>`
     padding: ${props => props.$isScrolled ? '12px 20px' : '18px 24px'};
     font-size: ${props => props.$isScrolled ? '14px' : '15px'};
     border-radius: ${props => props.$isScrolled ? '0 8px 0 0' : '8px'};
-    box-shadow: ${props => props.$isScrolled ? '0 -2px 10px rgba(0, 0, 0, 0.1)' : '0 4px 20px rgba(36, 17, 47, 0.3)'};
+    box-shadow: ${props => props.$isScrolled ? '0 -2px 10px rgba(0, 0, 0, 0.1)' : '0 4px 20px rgba(27, 38, 56, 0.3)'};
     animation: ${slideInFromLeft} 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s backwards;
-    background: ${props => props.$isScrolled ? 'rgba(36, 17, 47, 0.95)' : '#24112f'};
+    background: ${props => props.$isScrolled ? 'rgba(27, 38, 56, 0.95)' : '#1b2638'};
     backdrop-filter: ${props => props.$isScrolled ? 'blur(10px)' : 'none'};
 
     &:active {
@@ -571,11 +571,11 @@ const DownloadButton = styled.a<{ $isScrolled: boolean }>`
   ${baseButtonStyles}
   bottom: 30px;
   right: 30px;
-  background: #5330c7;
+  background: #1e4694;
   animation: ${slideInFromRight} 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s backwards;
 
   &:hover {
-    background: #24112f;
+    background: #1b2638;
   }
 
   @media (max-width: 768px) {
@@ -584,9 +584,9 @@ const DownloadButton = styled.a<{ $isScrolled: boolean }>`
     padding: ${props => props.$isScrolled ? '12px 20px' : '18px 24px'};
     font-size: ${props => props.$isScrolled ? '14px' : '15px'};
     border-radius: ${props => props.$isScrolled ? '8px 0 0 0' : '8px'};
-    box-shadow: ${props => props.$isScrolled ? '0 -2px 10px rgba(0, 0, 0, 0.1)' : '0 4px 20px rgba(83, 48, 199, 0.3)'};
+    box-shadow: ${props => props.$isScrolled ? '0 -2px 10px rgba(0, 0, 0, 0.1)' : '0 4px 20px rgba(30, 70, 148, 0.3)'};
     animation: ${slideInFromRight} 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s backwards;
-    background: ${props => props.$isScrolled ? 'rgba(83, 48, 199, 0.95)' : '#5330c7'};
+    background: ${props => props.$isScrolled ? 'rgba(30, 70, 148, 0.95)' : '#1e4694'};
     backdrop-filter: ${props => props.$isScrolled ? 'blur(10px)' : 'none'};
 
     &:active {
@@ -668,7 +668,8 @@ export default () => {
           designed a rendering pipeline running <strong>50 parallel GPU workers</strong> on Airflow
           and built the backend of its LLM agent. Before that I was the main technical owner of an
           e-commerce platform at Monterail and coordinated <strong>up to 5 developers</strong> as
-          feature owner on Braintrust. Co-founder of Moja Matura (<strong>50,000+ registered users</strong>). I pick up new domains fast.
+          feature owner on Braintrust. Co-founder of Moja Matura (<strong>50,000+ registered users</strong>). I take full ownership from design to
+          production.
         </Summary>
 
         <WorkHistorySection>
@@ -677,23 +678,24 @@ export default () => {
           <WorkEntry>
             <WorkHeader>
               <JobTitle>
-                Senior Backend Developer, <Company>SKY ENGINE AI</Company>
+                Senior Software Engineer, <Company>SKY ENGINE AI</Company>
               </JobTitle>
               <DateRange>Nov 2025 - Present</DateRange>
             </WorkHeader>
             <WorkDescription>
-              Cloud-native, multi-tenant microservices platform generating synthetic visual training data for
-              Vision AI, used by enterprise customers. 5-person cross-functional team.
+              Multi-tenant microservices platform generating synthetic training data for Vision AI,
+              used by enterprise customers. 5-person team.
             </WorkDescription>
             <BulletList>
               <li>
                 Designed and rolled out the <strong>Apache Airflow</strong> rendering pipeline
-                (Kubernetes executor, AWS), replacing a custom legacy solution:{" "}
-                <strong>50 parallel GPU workers, hundreds of rendered animations per day</strong>.
+                (Kubernetes executor, AWS), replacing custom legacy Kubernetes pod management:{" "}
+                <strong>50 parallel GPU workers, hundreds of rendered animations per day</strong> (peaks
+                near 1,000), with fewer failed renders and far less manual intervention.
               </li>
               <li>
-                Built the platform's RBAC permissions model, plus usage-based billing and
-                metering (GPU-hours per rendering job).
+                Built the RBAC permissions model, plus <strong>usage-based billing</strong> and metering
+                (GPU-hours per job).
               </li>
               <li>
                 Built the backend of a <strong>conversational AI agent</strong> (LLM, Claude Managed Agents, tool calling) that turns
@@ -701,9 +703,9 @@ export default () => {
                 them for long-running execution.
               </li>
               <li>
-                Debug and monitor production issues (Sentry, Grafana, request tracing), build Python
-                services (Django, DRF, FastAPI, asyncio, SQLAlchemy, Pydantic, WebSockets) with
-                RabbitMQ and PostgreSQL, and review code.
+                Build and operate <strong>Python services</strong> (Django, DRF, FastAPI, asyncio,
+                SQLAlchemy, Pydantic, WebSockets) with RabbitMQ and PostgreSQL; debug production with
+                Sentry, Grafana and request tracing.
               </li>
             </BulletList>
           </WorkEntry>
@@ -729,7 +731,7 @@ export default () => {
                 traffic peaks.
               </li>
               <li>
-                Signed and onboarded <strong>up to 20 partner schools</strong>, handling the
+                Signed and onboarded <strong>about 20 partner schools</strong>, handling the
                 commercial side alongside all engineering.
               </li>
             </BulletList>
@@ -743,13 +745,14 @@ export default () => {
               <DateRange>Mar 2025 - Nov 2025</DateRange>
             </WorkHeader>
             <WorkDescription>
-              Software house; client projects in e-commerce and rentals.
+              Software house: client projects in e-commerce and rentals.
             </WorkDescription>
             <BulletList>
               <li>
-                Main technical owner of the transition and modernisation of a leading baby-food
-                brand's <strong>e-commerce platform</strong>: led all technical work and prioritised
-                scope.
+                Main technical owner of a leading baby-food brand's{" "}
+                <strong>e-commerce platform</strong> on unmaintained legacy Wagtail (Django CMS):
+                upgraded the whole stack, refactored much of the legacy code, improved CI and shipped
+                new features, working directly with the brand's managers.
               </li>
               <li>
                 Built a pricing-synchronisation service (Django, <strong>Celery</strong>, AWS) for a
@@ -762,13 +765,13 @@ export default () => {
           <WorkEntry>
             <WorkHeader>
               <JobTitle>
-                Senior Python Developer, <Company>Braintrust</Company>
+                Senior Backend Engineer, <Company>HexOcean</Company>
               </JobTitle>
               <DateRange>Aug 2022 - Dec 2024</DateRange>
             </WorkHeader>
             <WorkDescription>
-              Employed via HexOcean. Talent marketplace connecting freelancers and employers, with
-              many thousands of users.
+              At the time, HexOcean ran all of Braintrust's engineering (frontend, backend, DevOps).
+              Braintrust: a talent marketplace connecting freelancers and employers, with 600K+ users.
             </WorkDescription>
             <BulletList>
               <li>
@@ -778,12 +781,12 @@ export default () => {
               <li>
                 Delivered <strong>consolidated invoicing</strong>,{" "}
                 <strong>feed-ranking algorithms</strong>, <strong>A/B testing</strong> and external
-                integrations, including Coinbase.
+                integrations (incl. Coinbase).
               </li>
               <li>
                 Built and maintained the REST API (<strong>Django REST Framework</strong>,
-                PostgreSQL, Elasticsearch, OpenSearch, DynamoDB, Celery, Redis); managed AWS
-                infrastructure with Terraform and CI/CD pipelines (GitHub Actions, GitLab CI).
+                PostgreSQL, Elasticsearch, OpenSearch, DynamoDB, Celery, Redis); managed AWS with
+                Terraform and CI/CD (GitHub Actions, GitLab CI).
               </li>
             </BulletList>
           </WorkEntry>
@@ -805,8 +808,8 @@ export default () => {
                 QA) on a greenfield client product: ran planning, estimation and the Kanban backlog, held 1:1s, helped with hiring, shipped the MVP.
               </li>
               <li>
-                Built full-stack features for an AI product-content platform serving Nordic
-                e-commerce retailers (enrichment, generation, machine translation): React, DRF, plus
+                Built full-stack features for an <strong>AI product-content platform</strong> serving Nordic
+                e-commerce retailers (enrichment, generation, machine translation): React, DRF,
                 AWS S3 and Lambda integrations with external clients.
               </li>
               <li>
@@ -814,7 +817,7 @@ export default () => {
                 startup, with Stripe payments and Google Maps integration (PostGIS geo-search).
               </li>
               <li>
-                Mentored and advised JMR's team building an information-security compliance product
+                Mentored and advised a second in-house team building an <strong>information-security compliance product</strong>{" "}
                 for a Swedish client.
               </li>
             </BulletList>
@@ -827,7 +830,7 @@ export default () => {
             <SkillCategory>
               <SkillCategoryTitle>BACKEND:</SkillCategoryTitle>
               <SkillsList>
-                Python, Django, Django REST Framework (DRF), FastAPI, asyncio, SQLAlchemy,
+                Python, Django, Django REST Framework (DRF), Wagtail, FastAPI, asyncio, SQLAlchemy,
                 Pydantic, Celery, pytest, OAuth, SSO
               </SkillsList>
             </SkillCategory>
@@ -884,13 +887,12 @@ export default () => {
           <SectionTitle>Leadership and ways of working</SectionTitle>
           <BulletList>
             <li>
-              <b>Technical leadership:</b> Mentored developers and ran technical interviews at
-              Monterail and JMR.
+              <b>Technical leadership:</b> Mentored developers (HexOcean, JMR); interviewed candidates
+              (Monterail, JMR).
             </li>
             <li>
               <b>AI-assisted engineering:</b> Claude Code is my daily tool at every stage, from
-              exploring codebases and weighing designs to implementation, tests and review. I take
-              full ownership from design to production.
+              exploring codebases and weighing designs to implementation, tests and review.
             </li>
           </BulletList>
         </Section>
