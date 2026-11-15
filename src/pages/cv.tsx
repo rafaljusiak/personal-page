@@ -742,7 +742,7 @@ export default () => {
               <JobTitle>
                 Senior Python Developer, <Company>Monterail</Company>
               </JobTitle>
-              <DateRange>Mar 2025 - Nov 2025</DateRange>
+              <DateRange>Mar 2025 - Oct 2025</DateRange>
             </WorkHeader>
             <WorkDescription>
               Software house: client projects in e-commerce and rentals.
