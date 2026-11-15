@@ -872,7 +872,7 @@ export default () => {
             </SkillCategory>
 
             <SkillCategory>
-              <SkillCategoryTitle>FRONTEND (SUPPORTING):</SkillCategoryTitle>
+              <SkillCategoryTitle>FRONTEND:</SkillCategoryTitle>
               <SkillsList>
                 React, TypeScript
               </SkillsList>
