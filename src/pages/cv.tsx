@@ -51,7 +51,7 @@ const CVContainer = styled.div`
   max-width: 900px;
   margin: 0 auto;
   padding: 40px 20px;
-  font-family: 'Oswald', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background: #ffffff;
   color: #333;
   line-height: 1.6;
@@ -60,7 +60,8 @@ const CVContainer = styled.div`
     padding: 0;
     max-width: 100%;
     margin: 0;
-    font-size: 11pt;
+    font-size: 10pt;
+    line-height: 1.4;
   }
 `;
 
@@ -73,8 +74,8 @@ const Header = styled.header`
 
   @media print {
     border-bottom: 2px solid #24112f;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
+    margin-bottom: 10pt;
+    padding-bottom: 7pt;
     animation: none;
   }
 `;
@@ -82,14 +83,38 @@ const Header = styled.header`
 const Name = styled.h1`
   font-size: 42px;
   font-weight: 700;
-  margin: 0 0 15px 0;
+  margin: 0 0 10px 0;
   color: #24112f;
   letter-spacing: 2px;
+
+  @media (max-width: 600px) {
+    font-size: 34px;
+  }
 
   @media print {
     font-size: 22pt;
     color: #24112f;
-    margin: 0 0 8px 0;
+    margin: 0 0 3pt 0;
+    line-height: 1.1;
+  }
+`;
+
+const Tagline = styled.div`
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #24112f;
+  text-wrap: balance;
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+
+  @media print {
+    font-size: 11.5pt;
+    color: #24112f;
+    margin-bottom: 4pt;
+    line-height: 1.25;
   }
 `;
 
@@ -97,11 +122,12 @@ const ContactInfo = styled.div`
   font-size: 14px;
   margin-bottom: 10px;
   color: #555;
+  text-wrap: balance;
 
   @media print {
     font-size: 10pt;
     color: #555;
-    margin-bottom: 5px;
+    margin-bottom: 1pt;
   }
 `;
 
@@ -113,15 +139,27 @@ const Links = styled.div`
     color: #5330c7;
     text-decoration: none;
     margin: 0 10px;
+    white-space: nowrap;
 
     &:hover {
       text-decoration: underline;
     }
   }
 
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    span {
+      display: none;
+    }
+  }
+
   @media print {
     font-size: 10pt;
-    margin-top: 3px;
+    margin-top: 1pt;
 
     a {
       color: #5330c7;
@@ -143,9 +181,9 @@ const Summary = styled.section`
     background: #f8f8f8;
     border-left: 3px solid #5330c7;
     font-size: 10pt;
-    padding: 8px;
-    margin-bottom: 12px;
-    line-height: 1.4;
+    padding: 6pt 9pt;
+    margin-bottom: 14pt;
+    line-height: 1.45;
     animation: none;
   }
 `;
@@ -155,7 +193,8 @@ const Section = styled.section`
   animation: ${slideInFromBottom} 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.3s backwards;
 
   @media print {
-    margin-bottom: 12px;
+    margin-bottom: 14pt;
+    break-inside: avoid;
     page-break-inside: avoid;
     animation: none;
   }
@@ -166,7 +205,7 @@ const WorkHistorySection = styled.section`
   animation: ${slideInFromBottom} 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.3s backwards;
 
   @media print {
-    margin-bottom: 12px;
+    margin-bottom: 14pt;
     page-break-inside: auto;
     animation: none;
   }
@@ -182,42 +221,65 @@ const SectionTitle = styled.h2`
   text-transform: uppercase;
   letter-spacing: 1px;
 
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
+
   @media print {
-    font-size: 14pt;
+    font-size: 12pt;
     border-bottom: 1px solid #24112f;
     color: #24112f;
-    margin-bottom: 8px;
-    padding-bottom: 4px;
+    margin: 0 0 6pt 0;
+    padding-bottom: 2pt;
+    line-height: 1.2;
+    break-after: avoid;
+    page-break-after: avoid;
   }
 `;
 
 const SkillsGrid = styled.div`
   display: grid;
-  gap: 20px;
+  gap: 12px;
 
   @media print {
-    gap: 6px;
+    gap: 3.5pt;
   }
 `;
 
 const SkillCategory = styled.div`
-  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  column-gap: 16px;
+  align-items: baseline;
+
+  @media (max-width: 600px) {
+    display: block;
+  }
 
   @media print {
-    margin-bottom: 4px;
+    display: grid;
+    grid-template-columns: 158pt 1fr;
+    column-gap: 6pt;
   }
 `;
 
 const SkillCategoryTitle = styled.h3`
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0;
+  line-height: 1.6;
   color: #5330c7;
 
+  @media (max-width: 600px) {
+    margin-bottom: 2px;
+  }
+
   @media print {
-    font-size: 11pt;
+    font-size: 8pt;
+    letter-spacing: 0.2pt;
     color: #5330c7;
-    margin-bottom: 3px;
+    line-height: 1.75;
   }
 `;
 
@@ -228,9 +290,9 @@ const SkillsList = styled.p`
   color: #555;
 
   @media print {
-    font-size: 9pt;
-    color: #555;
-    line-height: 1.3;
+    font-size: 10pt;
+    color: #333;
+    line-height: 1.4;
   }
 `;
 
@@ -238,8 +300,13 @@ const WorkEntry = styled.div`
   margin-bottom: 25px;
   page-break-inside: avoid;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @media print {
-    margin-bottom: 10px;
+    margin-bottom: 11pt;
+    break-inside: avoid;
   }
 `;
 
@@ -249,21 +316,47 @@ const WorkHeader = styled.div`
   align-items: baseline;
   margin-bottom: 10px;
   flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 2px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    margin-bottom: 8px;
+  }
 
   @media print {
-    margin-bottom: 3px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 10pt;
+    margin-bottom: 1.5pt;
+    break-after: avoid;
   }
 `;
 
 const JobTitle = styled.h3`
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 19px;
+  font-weight: 700;
   margin: 0;
   color: #24112f;
+  line-height: 1.35;
+
+  @media (max-width: 600px) {
+    font-size: 17px;
+  }
 
   @media print {
-    font-size: 11pt;
+    font-size: 11.5pt;
     color: #24112f;
+    line-height: 1.25;
+  }
+`;
+
+const Company = styled.span`
+  color: #5330c7;
+  white-space: nowrap;
+
+  @media print {
+    color: #5330c7;
   }
 `;
 
@@ -272,17 +365,21 @@ const DateRange = styled.span`
   color: #666;
   font-weight: 500;
 
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+
   @media print {
-    font-size: 9pt;
-    color: #666;
+    font-size: 9.5pt;
+    color: #555;
   }
 `;
 
 const WorkDescription = styled.p`
   font-size: 14px;
-  margin: 10px 0 0 0;
+  margin: 0 0 8px 0;
   line-height: 1.7;
   color: #555;
+  font-style: italic;
 
   strong {
     color: #24112f;
@@ -290,13 +387,75 @@ const WorkDescription = styled.p`
   }
 
   @media print {
-    font-size: 9pt;
+    font-size: 10pt;
     color: #555;
-    margin: 3px 0 0 0;
-    line-height: 1.3;
+    font-style: italic;
+    margin: 0 0 2pt 0;
+    line-height: 1.4;
 
     strong {
       color: #24112f;
+    }
+  }
+`;
+
+const BulletList = styled.ul`
+  font-size: 14px;
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.7;
+  color: #555;
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  strong,
+  b {
+    color: #24112f;
+    font-weight: 600;
+  }
+
+  li::marker {
+    color: #5330c7;
+  }
+
+  @media print {
+    font-size: 10pt;
+    color: #333;
+    line-height: 1.4;
+    padding-left: 13pt;
+
+    li {
+      margin-bottom: 1.5pt;
+    }
+
+    strong,
+    b {
+      color: #24112f;
+    }
+  }
+`;
+
+const InfoRow = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 40px;
+
+  & > section {
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: 600px) {
+    display: block;
+  }
+
+  @media print {
+    display: grid;
+    column-gap: 24pt;
+
+    & > section {
+      margin-bottom: 0;
     }
   }
 `;
@@ -305,7 +464,7 @@ const InfoEntry = styled.div`
   margin-bottom: 15px;
 
   @media print {
-    margin-bottom: 6px;
+    margin-bottom: 0;
   }
 `;
 
@@ -316,9 +475,9 @@ const InfoTitle = styled.h3`
   color: #24112f;
 
   @media print {
-    font-size: 11pt;
+    font-size: 10.5pt;
     color: #24112f;
-    margin: 0 0 2px 0;
+    margin: 0 0 1pt 0;
   }
 `;
 
@@ -328,9 +487,9 @@ const InfoDetail = styled.p`
   color: #555;
 
   @media print {
-    font-size: 9pt;
+    font-size: 10pt;
     color: #555;
-    margin: 2px 0;
+    margin: 0;
   }
 `;
 
@@ -343,8 +502,8 @@ const Footer = styled.footer`
   line-height: 1.5;
 
   @media print {
-    margin-top: 15px;
-    padding-top: 8px;
+    margin-top: 10pt;
+    padding-top: 5pt;
     font-size: 7pt;
     color: #666;
     line-height: 1.3;
@@ -361,7 +520,7 @@ const baseButtonStyles = `
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
-  font-family: 'Oswald', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   z-index: 1000;
 
@@ -457,7 +616,7 @@ export default () => {
         <meta name="robots" content="noindex, nofollow" />
         <meta
           name="description"
-          content="Rafał Jusiak - CV - Python Developer with 9 years of expertise"
+          content="Rafał Jusiak - CV - Senior Backend Engineer, Python, 9+ years"
         />
         <title>Rafał Jusiak - CV</title>
         <link rel="canonical" href="https://rafaljusiak.pl/cv" />
@@ -482,14 +641,21 @@ export default () => {
       <CVContainer>
         <Header>
           <Name>RAFAŁ JUSIAK</Name>
+          <Tagline>
+            Senior Python Backend Engineer · Technical leadership · Co-founder
+          </Tagline>
           <ContactInfo>
-            kontakt@rafaljusiak.pl | +48 509 307 322 | Warszawa, Mazowieckie
+            kontakt@rafaljusiak.pl | +48 509 307 322 | Warsaw, Poland
           </ContactInfo>
           <Links>
             <a href="https://www.linkedin.com/in/rafal-jusiak/" target="_blank" rel="noopener noreferrer">
               linkedin.com/in/rafal-jusiak
             </a>
-            |
+            <span>|</span>
+            <a href="https://github.com/rafaljusiak" target="_blank" rel="noopener noreferrer">
+              github.com/rafaljusiak
+            </a>
+            <span>|</span>
             <a href="https://rafaljusiak.pl" target="_blank" rel="noopener noreferrer">
               rafaljusiak.pl
             </a>
@@ -497,151 +663,260 @@ export default () => {
         </Header>
 
         <Summary>
-          Product Engineer with commercial experience since 2017. Co-founder of Moja Matura, grown to a user base of 50,000+. I architect high-quality Python backends - from planning to cloud deployment - across education, fintech, e-commerce, and talent marketplaces, and today I build the engine of a synthetic data generation platform that produces photorealistic training data for Vision AI, alongside AI-powered backends and LLM integrations. I take full ownership of every task I'm given, from design to production.
+          Senior backend software engineer with 9+ years of commercial Python (Django, FastAPI, PostgreSQL,
+          AWS, Kubernetes) across Vision AI, marketplaces, edtech and e-commerce. At SKY ENGINE AI I
+          designed a rendering pipeline running <strong>50 parallel GPU workers</strong> on Airflow
+          and built the backend of its LLM agent. Before that I was the main technical owner of an
+          e-commerce platform at Monterail and coordinated <strong>up to 5 developers</strong> as
+          feature owner on Braintrust. Co-founder of Moja Matura (<strong>50,000+ registered users</strong>). I pick up new domains fast.
         </Summary>
+
+        <WorkHistorySection>
+          <SectionTitle>Experience</SectionTitle>
+
+          <WorkEntry>
+            <WorkHeader>
+              <JobTitle>
+                Senior Backend Developer, <Company>SKY ENGINE AI</Company>
+              </JobTitle>
+              <DateRange>Nov 2025 - Present</DateRange>
+            </WorkHeader>
+            <WorkDescription>
+              Cloud-native, multi-tenant microservices platform generating synthetic visual training data for
+              Vision AI, used by enterprise customers. 5-person cross-functional team.
+            </WorkDescription>
+            <BulletList>
+              <li>
+                Designed and rolled out the <strong>Apache Airflow</strong> rendering pipeline
+                (Kubernetes executor, AWS), replacing a custom legacy solution:{" "}
+                <strong>50 parallel GPU workers, hundreds of rendered animations per day</strong>.
+              </li>
+              <li>
+                Built the platform's RBAC permissions model, plus usage-based billing and
+                metering (GPU-hours per rendering job).
+              </li>
+              <li>
+                Built the backend of a <strong>conversational AI agent</strong> (LLM, Claude Managed Agents, tool calling) that turns
+                natural language requests into validated, structured job specifications and submits
+                them for long-running execution.
+              </li>
+              <li>
+                Debug and monitor production issues (Sentry, Grafana, request tracing), build Python
+                services (Django, DRF, FastAPI, asyncio, SQLAlchemy, Pydantic, WebSockets) with
+                RabbitMQ and PostgreSQL, and review code.
+              </li>
+            </BulletList>
+          </WorkEntry>
+
+          <WorkEntry>
+            <WorkHeader>
+              <JobTitle>
+                Co-founder and Backend Engineer, <Company>Moja Matura</Company>
+              </JobTitle>
+              <DateRange>May 2020 - Present</DateRange>
+            </WorkHeader>
+            <WorkDescription>
+              Side venture, alongside full-time roles. Exam-prep web app for Polish school-leavers.
+            </WorkDescription>
+            <BulletList>
+              <li>
+                Took the product from MVP to <strong>50,000+ registered users</strong> and{" "}
+                <strong>3,500+ paid subscriptions</strong>.
+              </li>
+              <li>
+                Built the <strong>Django</strong> backend (REST and GraphQL APIs) with payments
+                (Przelewy24, Google Pay), analytics and school-administration modules; operate it on AWS through exam-season
+                traffic peaks.
+              </li>
+              <li>
+                Signed and onboarded <strong>up to 20 partner schools</strong>, handling the
+                commercial side alongside all engineering.
+              </li>
+            </BulletList>
+          </WorkEntry>
+
+          <WorkEntry>
+            <WorkHeader>
+              <JobTitle>
+                Senior Python Developer, <Company>Monterail</Company>
+              </JobTitle>
+              <DateRange>Mar 2025 - Nov 2025</DateRange>
+            </WorkHeader>
+            <WorkDescription>
+              Software house; client projects in e-commerce and rentals.
+            </WorkDescription>
+            <BulletList>
+              <li>
+                Main technical owner of the transition and modernisation of a leading baby-food
+                brand's <strong>e-commerce platform</strong>: led all technical work and prioritised
+                scope.
+              </li>
+              <li>
+                Built a pricing-synchronisation service (Django, <strong>Celery</strong>, AWS) for a
+                second client, keeping prices aligned across rental platforms for{" "}
+                <strong>2,000+ rental listings</strong>.
+              </li>
+            </BulletList>
+          </WorkEntry>
+
+          <WorkEntry>
+            <WorkHeader>
+              <JobTitle>
+                Senior Python Developer, <Company>Braintrust</Company>
+              </JobTitle>
+              <DateRange>Aug 2022 - Dec 2024</DateRange>
+            </WorkHeader>
+            <WorkDescription>
+              Employed via HexOcean. Talent marketplace connecting freelancers and employers, with
+              many thousands of users.
+            </WorkDescription>
+            <BulletList>
+              <li>
+                Coordinated <strong>up to 5 developers</strong> as feature owner: split the work,
+                reviewed code and took features from requirements to production monitoring.
+              </li>
+              <li>
+                Delivered <strong>consolidated invoicing</strong>,{" "}
+                <strong>feed-ranking algorithms</strong>, <strong>A/B testing</strong> and external
+                integrations, including Coinbase.
+              </li>
+              <li>
+                Built and maintained the REST API (<strong>Django REST Framework</strong>,
+                PostgreSQL, Elasticsearch, OpenSearch, DynamoDB, Celery, Redis); managed AWS
+                infrastructure with Terraform and CI/CD pipelines (GitHub Actions, GitLab CI).
+              </li>
+            </BulletList>
+          </WorkEntry>
+
+          <WorkEntry>
+            <WorkHeader>
+              <JobTitle>
+                Python Web Developer, <Company>JMR</Company>
+              </JobTitle>
+              <DateRange>Apr 2017 - Jul 2022</DateRange>
+            </WorkHeader>
+            <WorkDescription>
+              Software house: client projects in accounting, tourism, healthcare and AI text
+              generation, at times on several teams in parallel.
+            </WorkDescription>
+            <BulletList>
+              <li>
+                From Apr 2021, led a <strong>4-person cross-functional team</strong> (backend, frontend,
+                QA) on a greenfield client product: ran planning, estimation and the Kanban backlog, held 1:1s, helped with hiring, shipped the MVP.
+              </li>
+              <li>
+                Built full-stack features for an AI product-content platform serving Nordic
+                e-commerce retailers (enrichment, generation, machine translation): React, DRF, plus
+                AWS S3 and Lambda integrations with external clients.
+              </li>
+              <li>
+                Built the <strong>GraphQL API</strong> from scratch for a French sports-marketplace
+                startup, with Stripe payments and Google Maps integration (PostGIS geo-search).
+              </li>
+              <li>
+                Mentored and advised JMR's team building an information-security compliance product
+                for a Swedish client.
+              </li>
+            </BulletList>
+          </WorkEntry>
+        </WorkHistorySection>
 
         <Section>
           <SectionTitle>Skills</SectionTitle>
           <SkillsGrid>
             <SkillCategory>
-              <SkillCategoryTitle>BACKEND TECHNOLOGIES</SkillCategoryTitle>
+              <SkillCategoryTitle>BACKEND:</SkillCategoryTitle>
               <SkillsList>
-                Python, Django, Django REST Framework, Apache Airflow, FastAPI, Celery, RabbitMQ, Redis, asyncio, GraphQL, WebSockets, REST API, Microservices, Event-Driven Architecture, Pydantic, pytest, Anthropic Claude API, Claude Code
+                Python, Django, Django REST Framework (DRF), FastAPI, asyncio, SQLAlchemy,
+                Pydantic, Celery, pytest, OAuth, SSO
               </SkillsList>
             </SkillCategory>
 
             <SkillCategory>
-              <SkillCategoryTitle>DATABASES AND SEARCH ENGINES</SkillCategoryTitle>
+              <SkillCategoryTitle>ARCHITECTURE:</SkillCategoryTitle>
               <SkillsList>
-                SQL, PostgreSQL, pgvector, ElasticSearch, OpenSearch, NoSQL (DynamoDB)
+                Distributed systems, microservices, event-driven architecture, workflow
+                orchestration (Apache Airflow), message brokers (RabbitMQ), REST, GraphQL, WebSockets
               </SkillsList>
             </SkillCategory>
 
             <SkillCategory>
-              <SkillCategoryTitle>INFRASTRUCTURE AND DEVOPS</SkillCategoryTitle>
+              <SkillCategoryTitle>DATA:</SkillCategoryTitle>
               <SkillsList>
-                Amazon Web Services (AWS), Linux, Docker, Docker Compose, Continuous Integration (Gitlab CI, Github Workflows),
-                Kubernetes, Terraform, Grafana
+                PostgreSQL, PostGIS, pgvector, Redis, Elasticsearch, OpenSearch, DynamoDB, SQL
               </SkillsList>
             </SkillCategory>
 
             <SkillCategory>
-              <SkillCategoryTitle>OTHER</SkillCategoryTitle>
+              <SkillCategoryTitle>CLOUD AND INFRA:</SkillCategoryTitle>
               <SkillsList>
-                <strong>Product Ownership &amp; Strategy:</strong> Leveraging my experience as a <strong>Co-founder</strong> to bridge the gap between <strong>business vision and technical execution</strong>. I take ownership of the <strong>full product lifecycle</strong>: from initial <strong>app design and prototyping</strong> to <strong>deployment and user behavior analysis</strong>. I use <strong>data-driven insights</strong> to prioritize features that deliver the most value to the users.
-                <br />
-                <strong>Leadership &amp; Project Management:</strong> Provided <strong>technical leadership and strategic oversight</strong> of team workflows to ensure alignment with <strong>business goals</strong> and timely delivery. Drove <strong>process improvements</strong>, <strong>mentored developers</strong> and ensured smooth coordination and consistent delivery across the team.
-                <br />
-                <strong>AI-Assisted Engineering:</strong> I write virtually all of my code with <strong>Claude Code</strong>, from exploration and refactoring to implementation and tests, while I stay the architect: I design the solution, review every change and own every line that ships.
-                <br />
-                <strong>Client Collaboration &amp; Cross-functional Work:</strong> Partnered closely with <strong>clients</strong> to define requirements and guide <strong>technical and architectural decisions</strong>. Maintained transparent communication and coordinated with <strong>design, product, and business teams</strong> to ensure solutions met both technical and commercial objectives.
-                <br />
-                <strong>Third-party Integrations:</strong> Led the integration of key external services and APIs, including <strong>Stripe, SendGrid, Google Services, Coinbase, RevenueCat, Claude Managed Agents,</strong> and multiple <strong>e-commerce platforms</strong>.
+                AWS, EKS, ECS, Fargate, EC2, Lambda, S3, RDS, IAM, CloudWatch, Kubernetes, Docker,
+                Terraform, infrastructure as code, CI/CD, GitHub Actions, GitLab CI,
+                Grafana, Sentry, Linux
+              </SkillsList>
+            </SkillCategory>
+
+            <SkillCategory>
+              <SkillCategoryTitle>AI AND LLM:</SkillCategoryTitle>
+              <SkillsList>
+                LLM integrations, AI agents, tool calling, Anthropic Claude API, Claude Managed Agents,
+                Claude Code
+              </SkillsList>
+            </SkillCategory>
+
+            <SkillCategory>
+              <SkillCategoryTitle>PAYMENTS AND INTEGRATIONS:</SkillCategoryTitle>
+              <SkillsList>
+                Stripe, Przelewy24, Google Pay, Coinbase, RevenueCat, SendGrid
+              </SkillsList>
+            </SkillCategory>
+
+            <SkillCategory>
+              <SkillCategoryTitle>FRONTEND (SUPPORTING):</SkillCategoryTitle>
+              <SkillsList>
+                React, TypeScript
               </SkillsList>
             </SkillCategory>
           </SkillsGrid>
         </Section>
 
-        <WorkHistorySection>
-          <SectionTitle>Work History</SectionTitle>
-
-          <WorkEntry>
-            <WorkHeader>
-              <JobTitle>Senior Backend Developer, SKY ENGINE AI</JobTitle>
-              <DateRange>Nov 2025 - Present</DateRange>
-            </WorkHeader>
-            <WorkDescription>
-              I design and build the backend of a <strong>cloud-native, microservices-based platform</strong> for generating synthetic visual data for
-              Vision AI, used by <strong>enterprise customers</strong>. I led the design and rollout of the <strong>rendering pipeline</strong> on{" "}
-              <strong>Apache Airflow</strong>, orchestrating dozens of parallel workers on <strong>Kubernetes</strong> and <strong>AWS</strong>, and built
-              the platform's <strong>billing system from scratch</strong>, along with permissions and security. Working mainly in{" "}
-              <strong>Python (Django, DRF, FastAPI, asyncio)</strong> with <strong>RabbitMQ</strong> and <strong>PostgreSQL</strong>, I also own{" "}
-              <strong>production reliability</strong>, help shape the technical direction of the backend, and maintain high standards through detailed{" "}
-              <strong>code reviews</strong> in a senior-level team.
-            </WorkDescription>
-          </WorkEntry>
-
-          <WorkEntry>
-            <WorkHeader>
-              <JobTitle>Co-founder and Backend Engineer, Moja Matura</JobTitle>
-              <DateRange>Nov 2019 - Present</DateRange>
-            </WorkHeader>
-            <WorkDescription>
-              Co-founded and built a web application for school-leaving exam preparation, participating in <strong>every step
-              from ideation to market introduction</strong> - including <strong>developing the MVP</strong>, refining features after initial phases,
-              <strong>implementing payment systems</strong>, <strong>handling business matters</strong>, and <strong>introducing the platform to schools</strong>.
-              Developed the backend in <strong>Django</strong> with <strong>REST</strong> and <strong>GraphQL APIs</strong>, integrated payments, analytics,
-              and school modules, and managed <strong>AWS</strong> infrastructure for scalability. The system now supports{" "}
-              <strong>over 50,000 registered users</strong> across Poland.
-            </WorkDescription>
-          </WorkEntry>
-
-          <WorkEntry>
-            <WorkHeader>
-              <JobTitle>Senior Python Developer, Monterail</JobTitle>
-              <DateRange>Mar 2025 - Nov 2025</DateRange>
-            </WorkHeader>
-            <WorkDescription>
-              Took a <strong>leadership role</strong> in managing the transition and modernization of a key <strong>e-commerce platform for a
-              leading baby food brand</strong>. Oversaw all technical work, maintained strong client relationships with <strong>high responsiveness</strong> to
-              requests, and effectively managed tasks within <strong>tight budget constraints</strong>. Additionally, designed and implemented a{" "}
-              <strong>distributed task orchestration system</strong> using <strong>Django, Celery,</strong> and <strong>AWS</strong> to automate pricing
-              synchronization across rental platforms. <strong>Conducted technical interviews</strong> for new hires.
-            </WorkDescription>
-          </WorkEntry>
-
-          <WorkEntry>
-            <WorkHeader>
-              <JobTitle>Senior Python Developer, HexOcean</JobTitle>
-              <DateRange>Aug 2022 - Dec 2024</DateRange>
-            </WorkHeader>
-            <WorkDescription>
-              Contributed to <strong>Braintrust</strong>, a marketplace platform connecting freelancers and employers.
-              Developed and maintained a <strong>REST API</strong> using <strong>Django REST Framework, PostgreSQL,
-              Elasticsearch,</strong> and <strong>Celery</strong> with <strong>Redis</strong>, while managing <strong>AWS</strong> infrastructure via <strong>Terraform</strong>.
-              Took ownership of features <strong>end-to-end</strong>, from <strong>business analysis and requirements gathering</strong> through
-              development and testing to <strong>production deployment and monitoring</strong>. Delivered key features including consolidated
-              invoicing, feed algorithms, A/B testing, and external integrations. Conducted <strong>detailed code reviews</strong> to ensure
-              code quality, maintainability, and adherence to best practices. Built internal tools and <strong>CI</strong> pipelines to
-              automate workflows, collaborated closely with the product team, and mentored developers.
-            </WorkDescription>
-          </WorkEntry>
-
-          <WorkEntry>
-            <WorkHeader>
-              <JobTitle>Python Web Developer, JMR</JobTitle>
-              <DateRange>Apr 2017 - Jul 2022</DateRange>
-            </WorkHeader>
-            <WorkDescription>
-              Developed multiple web applications across diverse industries (accounting, tourism, healthcare, AI-generated texts)
-              using <strong>Django, Django REST Framework, graphene-django, AWS, React,</strong> and <strong>TypeScript</strong>.
-              <strong>Conducted recruitment calls</strong> to evaluate technical candidates and participated in <strong>initial client
-              meetings</strong> to gather requirements, discuss project scope, and provide technical consultation.
-            </WorkDescription>
-          </WorkEntry>
-        </WorkHistorySection>
-
         <Section>
-          <SectionTitle>Education</SectionTitle>
-          <InfoEntry>
-            <InfoTitle>Master of Science | Computer Science</InfoTitle>
-            <InfoDetail>Warsaw University of Life Sciences</InfoDetail>
-            <InfoDetail>Oct 2012 - Jan 2017</InfoDetail>
-          </InfoEntry>
+          <SectionTitle>Leadership and ways of working</SectionTitle>
+          <BulletList>
+            <li>
+              <b>Technical leadership:</b> Mentored developers and ran technical interviews at
+              Monterail and JMR.
+            </li>
+            <li>
+              <b>AI-assisted engineering:</b> Claude Code is my daily tool at every stage, from
+              exploring codebases and weighing designs to implementation, tests and review. I take
+              full ownership from design to production.
+            </li>
+          </BulletList>
         </Section>
 
-        <Section>
-          <SectionTitle>Languages</SectionTitle>
-          <InfoEntry>
-            <InfoDetail>English (Professional working proficiency), Polish (Native)</InfoDetail>
-          </InfoEntry>
-        </Section>
+        <InfoRow>
+          <Section>
+            <SectionTitle>Education</SectionTitle>
+            <InfoEntry>
+              <InfoTitle>Master of Science | Computer Science</InfoTitle>
+              <InfoDetail>Warsaw University of Life Sciences</InfoDetail>
+              <InfoDetail>Oct 2012 - Jan 2017</InfoDetail>
+            </InfoEntry>
+          </Section>
+
+          <Section>
+            <SectionTitle>Languages</SectionTitle>
+            <InfoEntry>
+              <InfoDetail>English (C1), Polish (Native)</InfoDetail>
+            </InfoEntry>
+          </Section>
+        </InfoRow>
 
         <Footer>
-          I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the Personal Data Protection Act of
-          10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April
-          2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive
-          95/46/EC (General Data Protection Regulation).
+          I consent to the processing of my personal data for the purposes of this recruitment
+          process, in accordance with Regulation (EU) 2016/679 (GDPR). I also consent to the
+          processing of my personal data for future recruitment processes.
         </Footer>
       </CVContainer>
 
@@ -649,7 +924,7 @@ export default () => {
         ← Back
       </BackButton>
 
-      <DownloadButton href="/cv.pdf" download="Rafał Jusiak - CV.pdf" $isScrolled={isScrolled}>
+      <DownloadButton href="/cv.pdf" download="Rafal_Jusiak_CV.pdf" $isScrolled={isScrolled}>
         Download PDF
       </DownloadButton>
     </>
