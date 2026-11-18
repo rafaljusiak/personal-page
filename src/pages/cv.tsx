@@ -642,7 +642,7 @@ export default () => {
         <Header>
           <Name>RAFAŁ JUSIAK</Name>
           <Tagline>
-            Senior Python Backend Engineer · Technical leadership · Co-founder
+            Senior Python Backend Engineer · Platform & Cloud · Co-founder
           </Tagline>
           <ContactInfo>
             kontakt@rafaljusiak.pl | +48 509 307 322 | Warsaw, Poland
@@ -663,13 +663,12 @@ export default () => {
         </Header>
 
         <Summary>
-          Senior backend software engineer with 9+ years of commercial Python (Django, FastAPI, PostgreSQL,
+          Senior backend engineer with 9+ years of commercial Python (Django, FastAPI, PostgreSQL,
           AWS, Kubernetes) across Vision AI, marketplaces, edtech and e-commerce. At SKY ENGINE AI I
-          designed a rendering pipeline running <strong>50 parallel GPU workers</strong> on Airflow
-          and built the backend of its LLM agent. Before that I was the main technical owner of an
-          e-commerce platform at Monterail and coordinated <strong>up to 5 developers</strong> as
-          feature owner on Braintrust. Co-founder of Moja Matura (<strong>50,000+ registered users</strong>). I take full ownership from design to
-          production.
+          own the control plane of a multi-tenant compute platform: Airflow orchestration over{" "}
+          <strong>50 parallel GPU workers</strong>, usage-based billing and the audit trail. Co-founder
+          of Moja Matura (<strong>50,000+ registered users</strong>). I take full ownership from design
+          to production.
         </Summary>
 
         <WorkHistorySection>
@@ -684,28 +683,31 @@ export default () => {
             </WorkHeader>
             <WorkDescription>
               Multi-tenant microservices platform generating synthetic training data for Vision AI,
-              used by enterprise customers. 5-person team.
+              used by enterprise customers. 5-person team (3 backend).
             </WorkDescription>
             <BulletList>
               <li>
-                Designed and rolled out the <strong>Apache Airflow</strong> rendering pipeline
-                (Kubernetes executor, AWS), replacing custom legacy Kubernetes pod management:{" "}
-                <strong>50 parallel GPU workers, hundreds of rendered animations per day</strong> (peaks
-                near 1,000), with fewer failed renders and far less manual intervention.
+                Replaced legacy Kubernetes pod management with an <strong>Apache Airflow</strong>{" "}
+                rendering backend running{" "}
+                <strong>50 parallel GPU workers, hundreds of animations per day</strong>; own job
+                lifecycle and multi-tenant <strong>RBAC</strong> in Django/DRF.
               </li>
               <li>
-                Built the RBAC permissions model, plus <strong>usage-based billing</strong> and metering
-                (GPU-hours per job).
+                Own <strong>usage-based billing</strong>: GPU-hour metering, a{" "}
+                <strong>credit ledger</strong> and admin refunds, built on idempotent RabbitMQ render
+                events.
               </li>
               <li>
-                Built the backend of a <strong>conversational AI agent</strong> (LLM, Claude Managed Agents, tool calling) that turns
-                natural language requests into validated, structured job specifications and submits
-                them for long-running execution.
+                Built the backend of a conversational <strong>LLM agent</strong> (Claude Managed
+                Agents, tool calling).
               </li>
               <li>
-                Build and operate <strong>Python services</strong> (Django, DRF, FastAPI, asyncio,
-                SQLAlchemy, Pydantic, WebSockets) with RabbitMQ and PostgreSQL; debug production with
-                Sentry, Grafana and request tracing.
+                Built the platform-wide <strong>audit trail</strong>: a new Django app recording
+                every action across the platform.
+              </li>
+              <li>
+                Built <strong>internal developer tooling</strong> that let other teams debug locally
+                and in the cluster on their own.
               </li>
             </BulletList>
           </WorkEntry>
@@ -732,7 +734,7 @@ export default () => {
               </li>
               <li>
                 Signed and onboarded <strong>about 20 partner schools</strong>, handling the
-                commercial side alongside all engineering.
+                commercial side alongside the engineering.
               </li>
             </BulletList>
           </WorkEntry>
@@ -751,8 +753,8 @@ export default () => {
               <li>
                 Main technical owner of a leading baby-food brand's{" "}
                 <strong>e-commerce platform</strong> on unmaintained legacy Wagtail (Django CMS):
-                upgraded the whole stack, refactored much of the legacy code, improved CI and shipped
-                new features, working directly with the brand's managers.
+                upgraded the whole stack, refactored legacy code, improved CI and shipped new
+                features for the brand's managers.
               </li>
               <li>
                 Built a pricing-synchronisation service (Django, <strong>Celery</strong>, AWS) for a
@@ -770,8 +772,8 @@ export default () => {
               <DateRange>Aug 2022 - Dec 2024</DateRange>
             </WorkHeader>
             <WorkDescription>
-              At the time, HexOcean ran all of Braintrust's engineering (frontend, backend, DevOps).
-              Braintrust: a talent marketplace connecting freelancers and employers, with 600K+ users.
+              At the time, HexOcean ran all of Braintrust's engineering. Braintrust: a talent
+              marketplace for freelancers and employers, with 600K+ users.
             </WorkDescription>
             <BulletList>
               <li>
@@ -785,8 +787,8 @@ export default () => {
               </li>
               <li>
                 Built and maintained the REST API (<strong>Django REST Framework</strong>,
-                PostgreSQL, Elasticsearch, OpenSearch, DynamoDB, Celery, Redis); managed AWS with
-                Terraform and CI/CD (GitHub Actions, GitLab CI).
+                PostgreSQL, Elasticsearch, DynamoDB, Celery, Redis); managed AWS with Terraform and
+                CI/CD.
               </li>
             </BulletList>
           </WorkEntry>
@@ -817,8 +819,8 @@ export default () => {
                 startup, with Stripe payments and Google Maps integration (PostGIS geo-search).
               </li>
               <li>
-                Mentored and advised a second in-house team building an <strong>information-security compliance product</strong>{" "}
-                for a Swedish client.
+                Mentored a second in-house team building an{" "}
+                <strong>information-security compliance product</strong>.
               </li>
             </BulletList>
           </WorkEntry>
@@ -830,8 +832,8 @@ export default () => {
             <SkillCategory>
               <SkillCategoryTitle>BACKEND:</SkillCategoryTitle>
               <SkillsList>
-                Python, Django, Django REST Framework (DRF), Wagtail, FastAPI, asyncio, SQLAlchemy,
-                Pydantic, Celery, pytest, OAuth, SSO
+                Python, Django, Django REST Framework (DRF), Wagtail, FastAPI, asyncio, Pydantic,
+                Celery, pytest, OAuth, SSO
               </SkillsList>
             </SkillCategory>
 
@@ -839,7 +841,8 @@ export default () => {
               <SkillCategoryTitle>ARCHITECTURE:</SkillCategoryTitle>
               <SkillsList>
                 Distributed systems, microservices, event-driven architecture, workflow
-                orchestration (Apache Airflow), message brokers (RabbitMQ), REST, GraphQL, WebSockets
+                orchestration (Apache Airflow), message brokers (RabbitMQ), idempotency and
+                exactly-once accounting, multi-tenancy, audit logging, REST, GraphQL, WebSockets
               </SkillsList>
             </SkillCategory>
 
@@ -854,7 +857,7 @@ export default () => {
               <SkillCategoryTitle>CLOUD AND INFRA:</SkillCategoryTitle>
               <SkillsList>
                 AWS, EKS, ECS, Fargate, EC2, Lambda, S3, RDS, IAM, CloudWatch, Kubernetes, Docker,
-                Terraform, infrastructure as code, CI/CD, GitHub Actions, GitLab CI,
+                Helm, minikube, Terraform, infrastructure as code, CI/CD, GitHub Actions, GitLab CI,
                 Grafana, Sentry, Linux
               </SkillsList>
             </SkillCategory>
@@ -884,15 +887,17 @@ export default () => {
         </Section>
 
         <Section>
-          <SectionTitle>Leadership and ways of working</SectionTitle>
+          <SectionTitle>Ownership and ways of working</SectionTitle>
           <BulletList>
             <li>
-              <b>Technical leadership:</b> Mentored developers (HexOcean, JMR); interviewed candidates
-              (Monterail, JMR).
+              <b>Ownership:</b> Design docs before large features; willing to scrap my own design
+              when it is wrong (three architectures in nine days on one feature, the first fully
+              reverted). Set standards for the team - a whole test suite migrated to uv + pytest,
+              shared AI tooling; mentor developers and run technical interviews.
             </li>
             <li>
-              <b>AI-assisted engineering:</b> Claude Code is my daily tool at every stage, from
-              exploring codebases and weighing designs to implementation, tests and review.
+              <b>AI-assisted engineering:</b> Claude Code is my daily tool, from exploring designs to
+              implementation, tests and review.
             </li>
           </BulletList>
         </Section>
